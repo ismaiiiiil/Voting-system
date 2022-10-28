@@ -289,14 +289,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background: url(../image/soccer-bg.jpg); */
-    background: url(../image/football.jpg);
+    /* background: url("https://media.gettyimages.com/photos/athlete-running-picture-id636887598?k=20&m=636887598&s=612x612&w=0&h=kD4zN9jRLs9qDsCzeRhHtiBymfpBWmnaWrMDCB3oCqc="); */
+    /* background: url("https://media.gettyimages.com/photos/sports-heroes-picture-id499194673?k=20&m=499194673&s=612x612&w=0&h=5y7Xus2f82ZJsKJLzlWII3jYu-JYAzYXdIx0AYeDjBU="); */
+    background: url("https://media.gettyimages.com/photos/soccer-player-kicking-ball-picture-id500240235?k=20&m=500240235&s=612x612&w=0&h=SFqFEHSDwroL7Zk5sUweP3z8AJhV4wASCvTYu3ZhsR4=");
+    /* background: url("https://cdn.pixabay.com/photo/2016/05/20/21/57/football-1406106__340.jpg"); */
+    /* background: url("https://cdn.pixabay.com/photo/2016/05/20/21/57/football-1406106__340.jpg"); */
     background-position: center;
-    background-size: cover;
+    background-size:contain;
+    /* background-size:cover; */
     padding-top: 17rem;
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
+    height: 44rem;
+    /* margin-top: 23rem; */
 }
-
 .home .content {
     text-align: center;
     width: 60rem;
