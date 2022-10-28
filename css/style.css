@@ -363,7 +363,9 @@ header {
 
 .categories .box-container .box img {
     margin: 1rem 0;
-    height: 15rem;
+    width: 100%;
+    border-radius: 3px;
+    height: 18rem;
 }
 
 .categories .box-container .box h3 {
