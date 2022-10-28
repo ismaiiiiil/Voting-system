@@ -10,7 +10,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 <body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="./index.html">Home</a>
+            <a href="#">Result</a>
+        </nav>
+    </header>
+    
+    <div class="clock"></div>
+
     <div id="container">
+        <!-- clock -->
+
+
         <div class="sliders">
             <!-- card no 1 -->
             <div class="cards">
@@ -148,7 +160,7 @@
 
     <!-- owl carousel cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+    <script src="js/flipclock.js"></script>
     <script>
         $(document).ready(function(){
             $(".sliders").owlCarousel({
@@ -158,6 +170,9 @@
                 autoplayHoverPause: true
             });
         })
+        var clock = $('.clock').FlipClock({
+            clockFace: 'TwelveHourClock'
+        });
     </script>
 </body>
 </html>
