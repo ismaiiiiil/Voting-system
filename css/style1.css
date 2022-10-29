@@ -63,7 +63,8 @@ section {
     padding: .8rem 3rem;
     font-size: 1.7rem;
     border-radius: .5rem;
-    background:transparent linear-gradient(116deg, #E59132 0%, #B59F55 100%) 0% 0% no-repeat padding-box !important;
+    background: #E59132;
+    /* background:transparent linear-gradient(116deg, #E59132 0%, #B59F55 100%) 0% 0% no-repeat padding-box !important; */
     color: #fff;
     cursor: pointer;
     /* background: none; */
