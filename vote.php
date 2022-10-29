@@ -1,3 +1,42 @@
+<?php
+// --------------------------recuperation les donner 9dam----------------------------------
+// ila makanch id
+if(!isset($_GET["id"]))
+{
+    header("Location:index.php");
+}
+
+
+
+if(isset($_GET["id"])) 
+{
+    $id = $_GET["id"];
+    if(!is_numeric($id))
+    {
+        header("Location:index.php");
+    }
+        require("config.php");
+        $query = "SELECT * from candidates
+        JOIN categories on categories.catg_id=candidates.category
+        where category=:id"; 
+        $stmt = $db->prepare($query);
+        $stmt->execute(array(":id"=>$id)); 
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+        // ila kayn id fla base de donner
+        if(count($data) == 0)
+        {
+            header("Location:index.php");
+        }
+        
+}
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +51,7 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <a href="./index.html">Home</a>
+            <a href="./index.php">Home</a>
             <a href="#">Result</a>
         </nav>
     </header>
@@ -24,18 +63,18 @@
 
 
         <div class="sliders">
-            <!-- card no 1 -->
+        <?php foreach($data as $candidate) : ?>
             <div class="cards">
                 <!-- profile images -->
                 <div class="profile">
                     <div class="images">
-                        <img src="assets/image1.jpg" alt="">
+                        <img src="./public/uploads/<?php echo $candidate["candidate_image"]; ?>" alt="">
                     </div>
                 </div>
                 <div class="info">
                     <!-- user name -->
-                    <h2>ANAYA</h2>
-                    <p>WEB DEVELOPER</p>
+                    <h2><?php echo $candidate["firstname"];?></h2>
+                    <p><?php echo $candidate["lastname"];?></p>
                 </div>
                 <!-- cards Buttons -->
                 <div class="messages">
@@ -43,125 +82,11 @@
                 </div>
             </div>
 
+        <?php endforeach; ?>  
+            <!-- card no 1 -->
+           
             <!-- duplicate card according to your need -->
-            <div class="cards">
-                <div class="profile">
-                    <div class="images">
-                        <img src="assets/image2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="info">
-                    <!-- user name -->
-                    <h2>ISMAIL RH</h2>
-                    <p>FULL STACK</p>
-                </div>
-                <!-- cards Buttons -->
-                <div class="messages">
-                    <button class="btns">Vote Now</button>
-                </div>
-            </div>
-            <!-- card no 3 -->
-            <div class="cards">
-                <div class="profile">
-                    <div class="images">
-                        <img src="assets/image3.jpg" alt="">
-                    </div>
-                </div>
-                <div class="info">
-                    <!-- user name -->
-                    <h2>ANAYA</h2>
-                    <p>WEB DEVELOPER</p>
-                </div>
-                <!-- cards Buttons -->
-                <div class="messages">
-                    <button class="btns">Vote Now</button>
-                </div>
-            </div>
-            <!-- card no 4 -->
-            <div class="cards">
-                <div class="profile">
-                    <div class="images">
-                        <img src="assets/image4.jpg" alt="">
-                    </div>
-                </div>
-                <div class="info">
-                    <!-- user name -->
-                    <h2>ANAYA</h2>
-                    <p>WEB DEVELOPER</p>
-                </div>
-                <!-- cards Buttons -->
-                <div class="messages">
-                    <button class="btns">Vote Now</button>
-                </div>
-            </div>
-            <!-- card no 5 -->
-            <div class="cards">
-                <div class="profile">
-                    <div class="images">
-                        <img src="assets/image5.jpg" alt="">
-                    </div>
-                </div>
-                <div class="info">
-                    <!-- user name -->
-                    <h2>MORAD</h2>
-                    <p>DEVELOPER</p>
-                </div>
-                <!-- cards Buttons -->
-                <div class="messages">
-                    <button class="btns">Vote Now</button>
-                </div>
-            </div>
-            <!-- card no 6 -->
-            <div class="cards">
-                <div class="profile">
-                    <div class="images">
-                        <img src="assets/image6.jpg" alt="">
-                    </div>
-                </div>
-                <div class="info">
-                    <!-- user name -->
-                    <h2>KHALID</h2>
-                    <p>ecommerce</p>
-                </div>
-                <!-- cards Buttons -->
-                <div class="messages">
-                    <button class="btns">Vote Now</button>
-                </div>
-            </div>
-            <!-- card no 7 -->
-            <div class="cards">
-                <div class="profile">
-                    <div class="images">
-                        <img src="assets/image7.jpg" alt="">
-                    </div>
-                </div>
-                <div class="info">
-                    <!-- user name -->
-                    <h2>mohamed</h2>
-                    <p>player</p>
-                </div>
-                <!-- cards Buttons -->
-                <div class="messages">
-                    <button class="btns">Vote Now</button>
-                </div>
-            </div>
-            <!-- card no 8 -->
-            <div class="cards">
-                <div class="profile">
-                    <div class="images">
-                        <img src="assets/image8.jpg" alt="">
-                    </div>
-                </div>
-                <div class="info">
-                    <!-- user name -->
-                    <h2>ANAYA</h2>
-                    <p>WEB DEVELOPER</p>
-                </div>
-                <!-- cards Buttons -->
-                <div class="messages">
-                    <button class="btns">Vote Now</button>
-                </div>
-            </div>
+        
         </div> 
     </div>
     <!-- jQuery CDN -->
