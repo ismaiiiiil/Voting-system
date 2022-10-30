@@ -45,7 +45,7 @@ $users = $data->fetchAll(); // tatjib kolchi
                     <!-- users -->
                     <div class="heading">
                         <h2>Users</h2>
-                        <a href="#" class="btn-view">Ajouter</a>
+                        <a href="./ajouterUser.php" class="btn-view">Ajouter</a>
                     </div>
                     <table class="appointments">
                         <thead>
@@ -80,7 +80,7 @@ $users = $data->fetchAll(); // tatjib kolchi
                 <div class="doctor-visiting">
                     <div class="heading">
                         <h2>Candidates</h2>
-                        <a href="#" class="btn-view">Ajouter</a>
+                        <a href="./ajouterCadidate.php" class="btn-view">Ajouter</a>
                     </div>
                     <table class="visiting">
                         <thead>
