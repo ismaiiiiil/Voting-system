@@ -108,7 +108,9 @@ header {
 .cards .info {
   margin-left:5% ;
   margin-top: 5%;
+color: #d4d4d4;
 }
+
 .cards .info p {
     color: #d4d4d4;
     font-weight: bold;

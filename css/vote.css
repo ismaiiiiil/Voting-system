@@ -102,7 +102,8 @@ header {
 }
 .cards .info {
   margin-left:5%;
-  margin-top: 3.5%;
+  margin-top: 3.5%;  
+  color: #d4d4d4;
 }
 .cards:hover{
     outline: .2rem solid rgba(255, 200, 3, 0.84);
@@ -157,7 +158,8 @@ p
     display: grid;
     place-items: center;
     /* background:transparent linear-gradient(116deg, #E59132 0%, #B59F55 100%) 0% 0% no-repeat padding-box !important; */
-    color: #fff;
+    color: #d4d4d4;
+    font-weight: bold;
     border-radius: 30px;
     /* margin-bottom: -29px; */
 
