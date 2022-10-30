@@ -86,7 +86,7 @@ if(isset($_GET["id"]))
                 <div class="info">
                     <!-- user name -->
                     <h2><?php echo $candidate["firstname"] .' '.$candidate["lastname"] ;?></h2>
-                    <h4 class="text-danger"><?php echo $candidate["votes"]; ?></h4>
+                    <p><span><?php echo $candidate["votes"]; ?></span> voting</p>
 
                 </div>
                 <?php

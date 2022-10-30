@@ -109,6 +109,15 @@ header {
   margin-left:5% ;
   margin-top: 5%;
 }
+.cards .info p {
+    color: #d4d4d4;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.cards .info p span {
+    color: #ffd310;
+}
 .cards:hover{
     outline: .2rem solid rgba(255, 200, 3, 0.84);
     outline-offset: 0rem;
@@ -178,7 +187,7 @@ p
     padding: 0;
     width: 5em;
     height: 5em;
-    background-color: #fff; 
+    background-color: #d4d4d4; 
     border-radius: 50%;
     line-height: 5em;
  }
