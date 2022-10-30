@@ -78,8 +78,7 @@ if (isset($_GET["id"])) {
                 </div>
                 <div class="info">
                     <!-- user name -->
-                    <h2><?php echo $candidate["firstname"]; ?></h2>
-                    <p><?php echo $candidate["lastname"]; ?></p>
+                    <h2><?php echo $candidate["firstname"].' ' . $candidate["lastname"]; ; ?></h2>
                 </div>
                 <!-- cards Buttons -->
                 <div class="messages">

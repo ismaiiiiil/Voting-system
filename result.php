@@ -56,15 +56,13 @@ if(isset($_GET["id"]))
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 
-<body>*
+<body>
     <header class="header">
         <!-- <h1 href="#" class="logo"><i class="fa-solid fa-check-to-slot"></i>Voting</h1> -->
         <h3 href="#" class="logo">
             <img src="./assets/logo2.png" width="35px" height="35px" alt="">
             Voting
         </h3>
-
-
         <nav class="navbar">
             <a href="index.php">Home</a>
         </nav>
@@ -88,6 +86,8 @@ if(isset($_GET["id"]))
                 <div class="info">
                     <!-- user name -->
                     <h2><?php echo $candidate["firstname"] .' '.$candidate["lastname"] ;?></h2>
+                    <h4 class="text-danger"><?php echo $candidate["votes"]; ?></h4>
+
                 </div>
                 <?php
                     $sum = (int) $sum_vote;
