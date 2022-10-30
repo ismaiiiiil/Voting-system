@@ -5,6 +5,7 @@
           </div>
           <i class="fas fa-bell"></i>
           <div class="user">
-              <img src="doctor1.png" alt="">
+              <i class="fa-solid fa-user-gear"></i>
+              <!-- <img src="./../img/leader.png" width="30px" alt=""> -->
           </div>
       </div>
