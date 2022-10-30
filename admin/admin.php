@@ -1,14 +1,14 @@
 <?php
 require("../config.php");
 
-$query = "SELECT * FROM categories";
+$query = "SELECT * FROM candidates";
 $data = $db->query($query); // PDOStatment -- CURSEUR
-$categories = $data->fetchAll(); // tatjib kolchi
+$candidates = $data->fetchAll(); // tatjib kolchi
 
 
-$query = "SELECT * FROM categories";
+$query = "SELECT * FROM users";
 $data = $db->query($query); // PDOStatment -- CURSEUR
-$categories = $data->fetchAll(); // tatjib kolchi
+$users = $data->fetchAll(); // tatjib kolchi
 
 ?>
 <!DOCTYPE html>
@@ -47,23 +47,30 @@ $categories = $data->fetchAll(); // tatjib kolchi
                     </div>
                     <table class="appointments">
                         <thead>
-                            <td>Name</td>
-                            <td>Doctor</td>
-                            <td>Condition</td>
+                            <td>FullName</td>
+                            <td>Email</td>
+                            <td>Birth date</td>
                             <td>Actions</td>
                         </thead>
                         <tbody>
+                            <?php foreach ($users as $user) : ?>
                             <tr>
-                                <td>Liam Smith Doe</td>
-                                <td>Dr. Benjamin</td>
-                                <td>fracture</td>
+                                <td>
+                                    <?php echo $user['firstname'] . ' ' . $user['lastname']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $user['email']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $user['birth_date'] ?>
+                                </td>
                                 <td>
                                     <i class="far fa-eye"></i>
                                     <i class="far fa-edit"></i>
                                     <i class="far fa-trash-alt"></i>
                                 </td>
                             </tr>
-
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -81,16 +88,26 @@ $categories = $data->fetchAll(); // tatjib kolchi
                             <td>Detail</td>
                         </thead>
                         <tbody>
+                            <?php foreach ($candidates as $candidate) : ?>
+
                             <tr>
                                 <td>
                                     <div class="img-box-small">
-                                        <img src="doctor1.png" alt="">
+                                        <img src="../public/uploads/<?php echo $candidate['candidate_image']; ?>"
+                                            alt="">
                                     </div>
                                 </td>
-                                <td>Benjamin</td>
-                                <td>14:00</td>
+                                <td>
+                                    <?php echo $candidate['firstname'] . ' ' . $candidate['lastname']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $candidate['votes']; ?>
+                                </td>
+
                                 <td><i class="far fa-eye"></i></td>
                             </tr>
+                            <?php endforeach; ?>
+
                         </tbody>
                     </table>
                 </div>
