@@ -5,11 +5,7 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
-.clock{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
+
 body
 {
     display: grid;
@@ -19,23 +15,61 @@ body
     background:  #26282f 0% 0% no-repeat padding-box;
     color: #fff;
 }
+.clock {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: -4rem;
+
+}
 #container
 {
-    width: 1200px;
+    /* width: 1200px; */
+    margin-top: 5rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     overflow: hidden;
 }
-.header .navbar a {
-  font-size: 1.7rem;
-  margin: 0 1rem;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 9%;
+  background: #17171b 0% 0% no-repeat padding-box;
+  /* box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 1); */
+}
+
+.header .logo {
+  display: flex;
+  flex-direction: row;
+  font-size: 2.5rem;
+  font-weight: bolder;
   color: #fff;
+}
+
+
+.header .logo img {
+  margin-right: 10px;
+}
+
+.header .navbar a {
+  text-decoration: none;
+  font-size: small;
 }
 
 .header .navbar a:hover {
   color: rgba(255, 200, 3, 0.84);
 }
 
+
+
+
+/*----------Header Section CSS Ends-----------------*/
 .sliders
 {
     /* height: 500px;

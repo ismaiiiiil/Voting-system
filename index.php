@@ -25,12 +25,17 @@
 
 <body>
     <header class="header">
-        <h1 href="#" class="logo"><i class="fa-solid fa-check-to-slot"></i>Voting</h1>
+        <!-- <h1 href="#" class="logo"><i class="fa-solid fa-check-to-slot"></i>Voting</h1> -->
+        <h1 href="#" class="logo">
+            <img src="./assets/logo2.png" width="35px" height="35px" alt="">    
+            Voting
+        </h1>
 
 
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
+            <a href="index.php">Home</a>
+            <!-- <a href="vote.php">vote</a> -->
+            <a href="result.php">result</a>
         </nav>
 
         <div class="icons">
@@ -51,7 +56,7 @@
     <section class="home" id="home">
         <div class="content">
             <h3>Voting The best <span>¨Players</span> in The world</h3>
-            <a href="./vote.html" class="btn">Vote Now</a>
+            <a href="#category" class="btn">Vote Now</a>
         </div>
     </section>
 
