@@ -25,7 +25,7 @@ if($_SESSION['status_code'] = 'success'){
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-all">
         <!-- sidebar -->
         <?php include('./include/sidebar.php') ?>
         <div class="main">

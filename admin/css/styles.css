@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-.container {
+.container-all {
     position: relative;
     width: 100%;
     color:#d4d4d4;
@@ -192,9 +192,10 @@ img {
     min-height: auto;
     /* background: #fff; */
     background: #17171b 0% 0% no-repeat padding-box;
-    padding: 20px;
+    padding: 14px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
 
 .heading {
     display: flex;
@@ -394,7 +395,7 @@ input,select {
 
 .btn:hover {
     cursor: pointer;
-    background-color: hsl(227deg 76% 28%);;
+    background-color: hsl(227deg 76% 28%);
     /* box-shadow: 1px 3px 5px rgba(0, 0, 255, 0.6); */
 }
 
@@ -486,7 +487,7 @@ input,select {
     .doctor-visiting {
         font-size: 70%;
         padding: 10px;
-        min-height: 200px;
+        min-height: 300px;
     }
     .cards,
     .tables {

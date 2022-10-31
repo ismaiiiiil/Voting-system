@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-all">
         <!-- sidebar -->
         <?php include('./include/sidebar.php') ?>
         <div class="main">
@@ -66,11 +66,12 @@
                                 <i class="fa-solid fa-eye-slash"></i>
                             </span>
                         </div>
+                        <div class="card-footer">
+                            <div type="submit" class="btn btn-primary" id="button-id">Ajouter</div>
+                        </div>
                     </form>
                 </div>
-                <div class="card-footer">
-                    <div type="submit" class="btn btn-primary" id="button-id">Ajouter</div>
-                </div>
+                
             </div>
         </div>
     </div>

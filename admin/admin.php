@@ -29,7 +29,7 @@ $users = $data->fetchAll(); // tatjib kolchi
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-all">
         <!-- sidebar -->
         <?php include('./include/sidebar.php') ?>
         <div class="main">
@@ -67,7 +67,7 @@ $users = $data->fetchAll(); // tatjib kolchi
                                 <td>
                                     <?php echo $user['birth_date'] ?>
                                 </td>
-                                <td>
+                                <td class="icon">
                                     <i class="far fa-eye"></i>
                                     <i class="far fa-edit"></i>
                                     <i class="far fa-trash-alt"></i>
@@ -106,8 +106,13 @@ $users = $data->fetchAll(); // tatjib kolchi
                                 <td>
                                     <?php echo $candidate['votes']; ?>
                                 </td>
-
-                                <td><i class="far fa-eye"></i></td>
+                                    <!-- button -->
+                                <td>
+                                    <i class="far fa-edit"></i>
+                                    <a href="DeleteCandidate.php?id=<?php echo $candidate["cand_id"];?>">
+                                        <i class="far fa-trash-alt"></i>
+                                    </a>
+                                </td>
                             </tr>
                             <?php endforeach; ?>
 
