@@ -92,6 +92,8 @@ header {
 }
 
 .header .logo {
+    display: flex;
+    flex-direction: row;
     font-size: 2.5rem;
     font-weight: bolder;
     color: #fff;
@@ -99,6 +101,9 @@ header {
 
 .header .logo i {
     color: rgba(255, 200, 3, 0.84);
+}
+.header .logo img {
+   margin-right: 10px ;
 }
 
 .header .navbar a {
@@ -290,20 +295,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background: url("https://media.gettyimages.com/photos/athlete-running-picture-id636887598?k=20&m=636887598&s=612x612&w=0&h=kD4zN9jRLs9qDsCzeRhHtiBymfpBWmnaWrMDCB3oCqc="); */
-    /* background: url("https://media.gettyimages.com/photos/soccer-player-kicking-ball-picture-id500240235?k=20&m=500240235&s=612x612&w=0&h=SFqFEHSDwroL7Zk5sUweP3z8AJhV4wASCvTYu3ZhsR4="); */
+    background: url("https://s1.1zoom.me/big0/882/Footbal_Men_Ball_Legs_502277.jpg");
+    /* background: url("https://st3.depositphotos.com/1000423/18127/i/450/depositphotos_181278194-stock-photo-soccer-best-moments-mixed-media.jpg"); */
     /* background: url("https://cdn.pixabay.com/photo/2016/05/20/21/57/football-1406106__340.jpg"); */
-    background: url("https://cdn.pixabay.com/photo/2016/05/20/21/57/football-1406106__340.jpg");
+    /* background: url("https://cdn.pixabay.com/photo/2016/05/20/21/57/football-1406106__340.jpg"); */
     background-position: center;
     background-size:contain;
     /* background-size:cover; */
     padding-top: 17rem;
     padding-bottom: 5rem;
-    height: 44rem;
+    height: 55rem;
     /* margin-top: 23rem; */
 }
 .home .content {
-    padding-top: 17rem;
+    padding-top: 22rem;
     text-align: center;
     width: 60rem;
 }

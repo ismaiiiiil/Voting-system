@@ -25,12 +25,17 @@
 
 <body>
     <header class="header">
-        <h1 href="#" class="logo"><i class="fa-solid fa-check-to-slot"></i>Voting</h1>
+        <!-- <h1 href="#" class="logo"><i class="fa-solid fa-check-to-slot"></i>Voting</h1> -->
+        <h1 href="#" class="logo">
+            <img src="./assets/logo2.png" width="35px" height="35px" alt="">
+            Voting
+        </h1>
 
 
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
+            <a href="index.php">Home</a>
+            <!-- <a href="vote.php">vote</a> -->
+            <a href="result.php">result</a>
         </nav>
 
         <div class="icons">
@@ -42,7 +47,7 @@
             <a href="#" class="btn">Logout</a>
             <div class="fa-solid fa-right-to-bracket" id="login-btn"></div> -->
         </div>
-      
+
     </header>
     <!-- header section ends -->
 
@@ -51,7 +56,7 @@
     <section class="home" id="home">
         <div class="content">
             <h3>Voting The best <span>¨Players</span> in The world</h3>
-            <a href="./vote.html" class="btn">Vote Now</a>
+            <a href="#category" class="btn">Vote Now</a>
         </div>
     </section>
 
@@ -60,19 +65,19 @@
         <h1 class="heading">Voting <span>categories</span></h1>
 
         <div class="box-container">
-        <?php foreach($data as $category) : ?>
+            <?php foreach($data as $category) : ?>
             <div class="box">
                 <img src="./public/uploads/<?php echo $category["image"]; ?>" alt="">
                 <h3><?php echo $category["catg_name"];?></h3>
                 <p><?php echo $category["end_date"];?></p>
                 <a href="vote.php?id=<?php echo $category["catg_id"];?>" class="btn">Voting Now</a>
             </div>
-        <?php endforeach; ?>            
+            <?php endforeach; ?>
         </div>
     </section>
     <!-- categories section starts  -->
 
-    
+
 
     <!-- blogs section ends -->
 
@@ -80,7 +85,7 @@
     <section class="footer">
         <div class="box-container">
             <div class="box">
-                <h3><i class="fa-solid fa-check-to-slot"></i>Voting  </h3>
+                <h3><i class="fa-solid fa-check-to-slot"></i>Voting </h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi corrupti possimus dolor molestiae.</p>
                 <div class="share">
                     <a href="#" class="fab fa-facebook-f"></a>
