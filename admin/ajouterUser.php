@@ -74,9 +74,7 @@
             </div>
         </div>
     </div>
-
-
-    <script type="text/javascript" src="./js/handleEye.js"></script>
+    <?php include './include/scripts.php';  ?>
 </body>
 
 </html>

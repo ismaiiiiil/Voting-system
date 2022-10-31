@@ -342,28 +342,6 @@ input,select {
     padding-right: 50px;
 }
 
-.btn {
-    width: 100px;
-    /* height: 50px; */
-    border-radius: 5px;
-    color: white;
-    margin-top: 40px;
-    margin-bottom: -70px;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, .3);
-    padding: 13px 5px ;
-    text-align: center;
-}
-
-.btn-primary {
-    background-color: hsl(240, 91%, 65%);
-}
-
-.btn:hover {
-    cursor: pointer;
-    box-shadow: 1px 3px 5px rgba(0, 0, 255, 0.6);
-}
-
 .eye {
     /* display: block; */
     width: 30px;
@@ -372,6 +350,52 @@ input,select {
     position: absolute;
     top: 41px;
     right: 10px;
+}
+.btn-warning{
+    position: relative;
+    padding: 11px 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #ffc100;
+    border: 0;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.btn-warning input[type="file"]{
+    cursor: pointer;
+    position: absolute;
+    left:0%;
+    top:0%;
+    transform: scale(5);
+    opacity: 0;
+}
+.btn-warning:hover{
+    background: #d9a400;
+}
+
+.btn {
+    width: 100px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: -70px;
+    font-weight: bold;
+    padding: 13px 5px ;
+    border: 0;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background-color:hsl(227deg 90% 54%);
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: hsl(227deg 76% 28%);;
+    /* box-shadow: 1px 3px 5px rgba(0, 0, 255, 0.6); */
 }
 
 .alert {

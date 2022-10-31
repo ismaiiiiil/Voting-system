@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("../config.php");
 
 $query = "SELECT * FROM candidates";
@@ -80,7 +81,7 @@ $users = $data->fetchAll(); // tatjib kolchi
                 <div class="doctor-visiting">
                     <div class="heading">
                         <h2>Candidates</h2>
-                        <a href="./ajouterCadidate.php" class="btn-view">Ajouter</a>
+                        <a href="./ajouterCandidate.php" class="btn-view">Ajouter</a>
                     </div>
                     <table class="visiting">
                         <thead>
@@ -116,6 +117,7 @@ $users = $data->fetchAll(); // tatjib kolchi
             </div>
         </div>
     </div>
+   <?php include './include/scripts.php';  ?>
 </body>
 
 </html>

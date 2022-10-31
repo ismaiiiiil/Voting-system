@@ -1,13 +1,13 @@
 <div class="sidebar">
     <ul>
         <li>
-            <a href="admin.html">
+            <a href="#">
                 <i class="fas fa-clinic-medical"></i>
                 <div class="title">The Best One</div>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="./admin.php">
                 <i class="fas fa-th-large"></i>
                 <div class="title">Admin</div>
             </a>
