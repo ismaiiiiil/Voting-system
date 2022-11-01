@@ -16,8 +16,7 @@
                 cancel: true,
         });
         <?php 
-        unset($_SESSION['status']);
-        unset($_SESSION['status_code']);
+        
     };
     ?>
 </script>

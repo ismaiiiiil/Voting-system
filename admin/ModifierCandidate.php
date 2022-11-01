@@ -1,4 +1,5 @@
 <?php
+
 include './CandidateControllers.php';
 $data = new CandidateController();
 $categories = $data->getAllcategories();
@@ -7,10 +8,10 @@ $data = new CandidateController();
 $candidate = $data->getCandidate();
 
 
-// if(isset($_POST['submit'])){
-//     $data = new CandidateController();
-//     $data->updateCandidate();
-// }
+if(isset($_POST['submit'])){
+    $data = new CandidateController();
+    $data->updateCandidate();
+}
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +47,13 @@ $candidate = $data->getCandidate();
                 <div class="card-body">
                     <!-- -------- Form  ----------- -->
                     <form method="POST" enctype="multipart/form-data">
+                         <!-- -------- hidden ------------- -->
+                         <input type="hidden"  name="cand_id" 
+                            value="<?php echo $candidate->cand_id;?>">
+                            <!-- ila ma3tanach image -->
+                        <input type="hidden"  name="candidate_image" 
+                            value="<?php echo $candidate->candidate_image;?>">
+
                         <div class="login-form">
                             <label for="login">Nom de Candidate</label>
                             <input type="text" name="firstname" id="login-id" placeholder="votre login" 
@@ -85,7 +93,7 @@ $candidate = $data->getCandidate();
                             </select>
                         </div>
                         <div class="card-footer">
-                            <input type="submit" name="submit" class="btn btn-primary" id="button-id" value="Ajouter" ></input>
+                            <input type="submit" name="submit" class="btn btn-primary" id="button-id" value="Modifier" ></input>
                         </div>
                     </form>
                 </div>

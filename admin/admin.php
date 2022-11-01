@@ -108,10 +108,10 @@ $users = $data->fetchAll(); // tatjib kolchi
                                 </td>
                                     <!-- button -->
                                 <td>
-                                    <a href="ModifierCandidate.php?id=<?php echo $candidate["cand_id"];?>">
+                                    <a onClick="return confirm('Are you sure you want to Modifier?')" type='button' href="ModifierCandidate.php?id=<?php echo $candidate["cand_id"];?>">
                                         <i class="far fa-edit"></i>
                                     </a>
-                                    <a href="DeleteCandidate.php?id=<?php echo $candidate["cand_id"];?>">
+                                    <a onClick="return confirm('Are you sure you want to delete?')" type='button' href="DeleteCandidate.php?id=<?php echo $candidate["cand_id"];?>">
                                         <i class="far fa-trash-alt"></i>
                                     </a>
                                 </td>
@@ -124,7 +124,10 @@ $users = $data->fetchAll(); // tatjib kolchi
             </div>
         </div>
     </div>
-   <?php include './include/scripts.php';  ?>
+    <?php include './include/scripts.php';  
+    unset($_SESSION['status']);
+    unset($_SESSION['status_code']);
+    ?>
 </body>
 
 </html>

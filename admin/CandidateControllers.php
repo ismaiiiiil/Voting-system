@@ -21,7 +21,14 @@ class CandidateController{
                 $stmt = DB::connect()->prepare($query);
                 $stmt->execute(array(":id"=> $id)); // execute fkolchi
                 $candidate = $stmt->fetch(PDO::FETCH_OBJ);
-                return $candidate;
+                if($candidate){
+                    return $candidate;
+                }else{
+                    $_SESSION['error'] = 'Candidate N\'exist pas';
+                    $_SESSION['status_code'] = 'error';
+                    header('location:admin.php');
+                }
+
             }else{
                 $_SESSION['error'] = 'Candidate N\'exist pas';
                 $_SESSION['status_code'] = 'error';
@@ -34,15 +41,13 @@ class CandidateController{
 // -------- donner form----------
 public function newCandidate(){
     if(isset($_POST["submit"])) {
-
+        
         // la valeur li jaya mn form
         $firstname = htmlspecialchars(strtolower(trim($_POST["firstname"])));
         $lastname = htmlspecialchars(strtolower(trim($_POST["lastname"])));
         $birth_date = htmlspecialchars(strtolower(trim($_POST["birth_date"])));
         // $candidate_image = $_POST["candidate_image"];
         $category = htmlspecialchars(strtolower(trim($_POST["category"])));
-        
-    
         // ila makanch erreur
         if(!empty($firstname) && !empty($lastname) && !empty($birth_date) && !empty($category) && !empty($_FILES["candidate_image"]["name"]) ) {
             $query = "INSERT into candidates value(NULL,:firstname,:lastname,:birth_date,:candidate_image,:category,NULL)";
@@ -57,13 +62,13 @@ public function newCandidate(){
                             ":category"=> $category,
                                     )); // execute fkolchi
 
-            $_SESSION['status'] = 'Candidate Profile Ajouter';
+            $_SESSION['status'] = 'Candidate Profile est Ajouter';
             $_SESSION['status_code'] = 'success';
-            // header('Location: admin.php');
+            header('Location: admin.php');
 
 
         }else{
-            $_SESSION['status'] = 'Tous les champs Obligatoire';
+            $_SESSION['status'] = 'Tous les champs sont Obligatoire';
             $_SESSION['status_code'] = 'error'; // info
             // header('Location: ajouterCadidate.php');
 
@@ -96,16 +101,23 @@ public function updateCandidate(){
         $birth_date = htmlspecialchars(strtolower(trim($_POST["birth_date"])));
         // $candidate_image = $_POST["candidate_image"];
         $category = htmlspecialchars(strtolower(trim($_POST["category"])));
+        $cand_id = htmlspecialchars(strtolower(trim($_POST["cand_id"])));
         
-    
         // ila makanch erreur
         if(!empty($firstname) && !empty($lastname) && !empty($birth_date) && !empty($category) && !empty($_FILES["candidate_image"]["name"]) ) {
             $query = "UPDATE candidates set
-            firstname=:firstname,lastname=:lastname,:birth_date,:candidate_image,:category,NULL)";
+            firstname=:firstname,
+            lastname=:lastname,
+            birth_date=:birth_date,
+            candidate_image=:candidate_image,
+            category=:category
+            WHERE cand_id=:cand_id
+            ";
             
             $oldImage= $_POST["candidate_image"];
             $stmt = DB::connect()->prepare($query);
             $stmt->execute(array(
+                            ":cand_id"=> $cand_id ,
                             ":firstname"=> $firstname ,
                             ":lastname"=> $lastname,
                             ":birth_date"=> $birth_date,
@@ -113,13 +125,13 @@ public function updateCandidate(){
                             ":category"=> $category,
                                     )); // execute fkolchi
 
-            $_SESSION['status'] = 'Candidate Profile Ajouter';
+            $_SESSION['status'] = 'Candidate Profile est Modifier';
             $_SESSION['status_code'] = 'success';
-            // header('Location: admin.php');
+            header('Location: admin.php');
 
 
         }else{
-            $_SESSION['status'] = 'Tous les champs Obligatoire';
+            $_SESSION['status'] = 'Tous les champs sont Obligatoire';
             $_SESSION['status_code'] = 'error'; // info
             // header('Location: ajouterCadidate.php');
 
