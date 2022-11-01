@@ -33,7 +33,7 @@ body {
 }
 
 .sidebar ul li:hover {
-    /* background: #444; */
+    /* color: #444; */
     background:  rgba(255, 200, 3, 0.84);
 }
 
@@ -43,7 +43,9 @@ body {
     font-weight: 600;
     border-bottom: 1px solid rgba(255, 200, 3, 0.84);
 }
-
+.sidebar ul li:first-child i{
+    color: rgba(255, 200, 3, 0.84);
+}
 .sidebar ul li:first-child:hover {
     background: none;
 }

@@ -2,7 +2,8 @@
     <ul>
         <li>
             <a href="#">
-                <i class="fas fa-clinic-medical"></i>
+                <i class="fa-solid fa-ranking-star"></i>
+                <!-- <i class="fas fa-clinic-medical"></i> -->
                 <div class="title">The Best One</div>
             </a>
         </li>
@@ -15,19 +16,20 @@
 
         <li>
             <a href="#">
-                <i class="fas fa-user-md"></i>
+                <i class="fa-solid fa-users"></i>
                 <div class="title">Users</div>
             </a>
         </li>
         <li>
             <a href="#">
-                <i class="fas fa-puzzle-piece"></i>
+                <!-- <i class="fas fa-puzzle-piece"></i> -->
+                <i class="fa-solid fa-medal"></i>
                 <div class="title">Candidates</div>
             </a>
         </li>
         <li>
             <a href="#">
-                <i class="fas fa-hand-holding-usd"></i>
+                <i class="fa-solid fa-square-poll-horizontal"></i>
                 <div class="title">Result</div>
             </a>
         </li>
