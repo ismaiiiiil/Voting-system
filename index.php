@@ -63,7 +63,7 @@
     <!-- categories section starts  -->
     
     <!-- categories V2 -->
-    <h1 class="heading">Voting <span>categories</span></h1>
+    <h1  id="category" class="heading">Voting <span>categories</span></h1>
 
     <section class="container-card">
         <?php foreach($data as $category) : ?>

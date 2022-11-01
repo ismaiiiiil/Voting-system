@@ -75,132 +75,96 @@ header {
 
 
 
-/*----------Header Section CSS Ends-----------------*/
-.sliders
-{
-    /* height: 500px;
-    width: 1200px; */
-    /* justify-content: center; */
+/* --------- card Version V2---------- */
+
+
+
+
+.wrapper {
     display: flex;
-    margin: auto;
+    /* margin: auto; */
+    /* height: 200px; */
     flex-direction: column;
-}
-.cards
-{
-    height: 97px;
-    width: 550px;
-    padding: 10px;
-    margin: 10px 25px;
-    position: relative;
-    border-radius: 20px;
-    /* overflow: hidden; */
-    flex-direction:row;
-    background:#14141b 0% 0% no-repeat padding-box;
-    box-shadow: inset 3px 3px 3px  rgba(255, 200, 3, 0.84),inset -3px -3px 4px rgba(0,0,0,0.2);
-    display: flex;
-    /* justify-content: center; */
-}
-.cards .info {
-  margin-left:5%;
-  margin-top: 3.5%;  
-  color: #d4d4d4;
-}
-.cards:hover{
-    outline: .2rem solid rgba(255, 200, 3, 0.84);
-    outline-offset: 0rem;
-    
-}
-.profile
-{
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    box-shadow: 3px 3px 3px  rgba(255, 200, 3, 0.84),-3px -3px 4px rgba(0,0,0,0.2);
-    /* position: absolute; */
-    top: 30px;
-    left: calc(25% - 75px);
-    display: grid;
-    place-items: center;
-}
-.images
-{
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 200, 3, 0.84);
-    overflow: hidden;
-}
-.images img
-{
-    width: 100%;
-}
-h2
-{
-    /* position: absolute; */
-    /* top: 200px; */
-}
-p
-{
-    /* position: absolute; */
-    top: 240px;
-}
-.messages 
-{
-    position: absolute;
-    bottom: 70px;
-    display: flex;
-    flex-direction: row;
-}
+  }
+  .wrapper .card{
+    background: #17171b 0% 0% no-repeat padding-box;
 
-.btns {
-    height: 60px;
-    width: 140px;
-    display: grid;
-    place-items: center;
-    /* background:transparent linear-gradient(116deg, #E59132 0%, #B59F55 100%) 0% 0% no-repeat padding-box !important; */
+    /* background: #26282f 0% 0% no-repeat padding-box; */
+    box-shadow: 0 5px 22px  rgba(255, 200, 3, 0.84);
+    transition: .3s ease-in-out;
     color: #d4d4d4;
-    font-weight: bold;
-    border-radius: 30px;
-    /* margin-bottom: -29px; */
-
-    margin: 0 10px;
-}
-
-.btns:hover {
-    /* box-shadow: #ff7800; */
-    box-shadow: 0 5px 15px 0  rgba(255, 200, 3, 0.84);
-}
-
-
-.btns  
-{
-    font-size: 17px;
-    height: 50px;
-    width: 130px;
-    border: none;
-    outline: none;
-    /* background:transparent linear-gradient(116deg, #E59132 0%, #B59F55 100%) 0% 0% no-repeat padding-box !important; */
-    background:#E59132;
-    margin-left:400px ;
-    border-radius: 30px;
-    margin-bottom: -50px;
-
-    color: #fff;
-    cursor: pointer;
-} 
-.owl-nav
-{
-    display: none;
-}
-.owl-dot
-{
-    display: none;
-}
-.owl-stage
-{
+    width: 520px;
     display: flex;
-    flex-direction: row;
-}
+    align-items: center;
+    padding: 20px;
+    /* margin-bottom: 10rem; */
+    /* position: absolute; */
+    margin: 30px 25px;
+    position: relative;
+    justify-content: space-between;
+    border-radius: 100px 20px 20px 100px;
+  
+  }
+  .wrapper .card:hover{
+    /* height: 100px; */
+    outline: .1rem solid rgba(255, 200, 3, 0.84);
+    outline-offset: 0rem;
+  }
+  .card .content{
+    display: flex;
+    align-items: center;
+  }
+  .wrapper .card .img{
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    left: -5px;
+    background: #B59F55;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  }
+  .card .img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .card .details{
+    margin-left: 80px;
+  }
+  .details span{
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .card a{
+    text-decoration: none;
+    padding: 7px 18px;
+    border-radius: 25px;
+    color: white;
+    background-color: #B59F55;
+    transition: all 0.3s ease;
+  }
+  .card a:hover{
+    transform: scale(1.2);
+    background-color: #dab53d;
+    box-shadow: 0 5px 15px 0  rgba(255, 200, 3, 0.84);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------  clock ------------ */
 .flip-clock-wrapper * {
     -webkit-box-sizing: border-box;

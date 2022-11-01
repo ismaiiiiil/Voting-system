@@ -46,12 +46,12 @@ section {
     padding: 2rem 0;
     padding-bottom: 3ren;
     font-size: 3.5rem;
-    color: #fff;
+    color: #B59F55;
 }
 
 .heading span {
-    background: transparent linear-gradient(116deg, #E59132 0%, #B59F55 100%) 0% 0% no-repeat padding-box;
-    color: #fff;
+    background:#B59F55;
+    color: #d4d4d4;
     display: inline-block;
     padding: .5rem 3rem;
     clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
@@ -101,7 +101,7 @@ header {
 }
 
 .header .logo i {
-    color: rgba(255, 200, 3, 0.84);
+    color: #dab53d;
 }
 .header .logo img {
    margin-right: 10px ;
@@ -114,7 +114,7 @@ header {
 }
 
 .header .navbar a:hover {
-    color: rgba(255, 200, 3, 0.84);
+    color: #dab53d;
 }
 
 .header .icons div {

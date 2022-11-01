@@ -67,30 +67,45 @@ if (isset($_GET["id"])) {
 
 
 
-        <div class="sliders">
-            <?php foreach ($data as $candidate) : ?>
+        <!--<div class="sliders">
+            <?php //foreach ($data as $candidate) : ?>
             <div class="cards">
-                <!-- profile images -->
                 <div class="profile">
                     <div class="images">
                         <img src="./public/uploads/<?php echo $candidate["candidate_image"]; ?>" alt="">
                     </div>
                 </div>
                 <div class="info">
-                    <!-- user name -->
                     <h2><?php echo $candidate["firstname"].' ' . $candidate["lastname"]; ; ?></h2>
                 </div>
-                <!-- cards Buttons -->
                 <div class="messages">
                     <button class="btns">Vote Now</button>
                 </div>
-            </div>
+            </div> -->
 
-            <?php endforeach; ?>
+            <?php //endforeach; ?>
             <!-- card no 1 -->
 
             <!-- duplicate card according to your need -->
 
+        <!-- </div> -->
+
+
+        <!-- version v2 -->
+        <div class="wrapper">
+            <?php foreach ($data as $candidate) : ?>
+
+            <div class="card" >
+                <div class="content">
+                <div class="img"><img src="./public/uploads/<?php echo $candidate["candidate_image"]; ?>" alt=""></div>
+                <div class="details">
+                    <span class="name"><?php echo $candidate["firstname"].' ' . $candidate["lastname"]; ; ?></span>
+                    <p>Frontend Developer</p>
+                </div>
+                </div>
+                <a href="#">Vote Now</a>
+            </div>      
+            <?php endforeach; ?>
         </div>
     </div>
     <!-- jQuery CDN -->
