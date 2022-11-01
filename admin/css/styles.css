@@ -113,6 +113,7 @@ body {
     position: absolute;
     right: 15px;
     top: 10px;
+    color: #17171b;
     cursor: pointer;
 }
 
@@ -194,6 +195,9 @@ img {
     background: #17171b 0% 0% no-repeat padding-box;
     padding: 14px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+td a{
+    text-decoration: none;
 }
 
 
@@ -323,7 +327,13 @@ form {
     margin-bottom: 20px;
     margin-top: 10px;
 }
-
+.login-form img {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: .05px solid rgba(255, 200, 3, 0.884);
+}
 .password-form {
     position: relative;
 }
@@ -342,6 +352,7 @@ input,select {
     padding: 10px;
     padding-right: 50px;
 }
+
 
 .eye {
     /* display: block; */

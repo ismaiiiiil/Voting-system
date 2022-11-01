@@ -61,22 +61,26 @@
     </section>
 
     <!-- categories section starts  -->
-    <section class="categories" id="category">
-        <h1 class="heading">Voting <span>categories</span></h1>
+    
+    <!-- categories V2 -->
+    <h1 class="heading">Voting <span>categories</span></h1>
 
-        <div class="box-container">
-            <?php foreach($data as $category) : ?>
-            <div class="box">
-                <img src="./public/uploads/<?php echo $category["image"]; ?>" alt="">
-                <h3><?php echo $category["catg_name"];?></h3>
-                <p><?php echo $category["end_date"];?></p>
-                <a href="vote.php?id=<?php echo $category["catg_id"];?>" class="btn">Voting Now</a>
+    <section class="container-card">
+        <?php foreach($data as $category) : ?>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="./public/uploads/<?php echo $category["image"]; ?>" alt="">
+                    <h1><?php  echo$category["catg_name"];?></h1>
+                </div>
+                <div class="content">
+                    <a class="btn-vote" href="vote.php?id=<?php echo $category["catg_id"];?>">Voting Now</a>
+                </div>
             </div>
-            <?php endforeach; ?>
-        </div>
-    </section>
-    <!-- categories section starts  -->
+        <?php endforeach; ?>
 
+        
+    </section>
 
 
     <!-- blogs section ends -->

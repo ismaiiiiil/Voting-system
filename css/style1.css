@@ -63,7 +63,7 @@ section {
     padding: .8rem 3rem;
     font-size: 1.7rem;
     border-radius: .5rem;
-    background: #E59132;
+    background-color: #B59F55;
     /* background:transparent linear-gradient(116deg, #E59132 0%, #B59F55 100%) 0% 0% no-repeat padding-box !important; */
     color: #fff;
     cursor: pointer;
@@ -72,6 +72,7 @@ section {
 
 .btn:hover {
     /* box-shadow: #ff7800; */
+    background-color: #dab53d;
     box-shadow: 0 5px 15px 0  rgba(255, 200, 3, 0.84);
 }
 
@@ -138,6 +139,7 @@ header {
     display: none;
 }
 
+
 .header .search-form {
     position: absolute;
     top: 110%;
@@ -202,6 +204,7 @@ header {
 .header .shopping-cart .box img {
     height: 10rem;
 }
+
 
 .header .shopping-cart .box .fa-trash {
     font-size: 2rem;
@@ -346,22 +349,22 @@ header {
 /*-------------Categories Section CSs--------------------*/
 
 .categories .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-    gap: 1.5rem;
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr)); */
+    /* gap: 1.5rem; */
 }
-
+/*
 .categories .box-container .box {
     padding: 3rem 2rem;
     border-radius: .5rem;
     background:#14141b 0% 0% no-repeat padding-box;
-    ;
+    ;*/
     /* box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 1); */
-    outline: .1rem solid rgba(0, 0, 0, .1);
+  /*  outline: .1rem solid rgba(0, 0, 0, .1);
     outline-offset: -1rem;
     text-align: center;
-}
-
+}*/
+/*
 .categories .box-container .box:hover {
     outline: .2rem solid rgba(255, 200, 3, 0.84);
     outline-offset: 0rem;
@@ -385,7 +388,103 @@ header {
     color: #666;
     line-height: 1.8;
     padding: 1rem 0;
+} */
+/* -----------  version v2 categories ---------------- */
+
+.container-card{
+    position: relative;
+    /* width: 1100px; */
+    height: auto;
+    display: flex;
+    background-color: #14141b 0% 0% no-repeat padding-box;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
 }
+.container-card .card h3 {
+    font-size: 2rem;
+    color: #fff;
+    line-height: 1.8;
+}
+.container-card .card{
+    position: relative;
+    max-width: 300px;
+    height: 230px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    color: #d4d4d4;
+    border-radius:5px ;
+    flex-direction: column;
+    background: #26282f 0% 0% no-repeat padding-box;
+    box-shadow: 0 5px 202px  rgba(255, 200, 3, 0.84);
+    transition: .3s ease-in-out;
+}
+
+.container-card .card:hover{
+    height: 300px;
+    outline: .2rem solid rgba(255, 200, 3, 0.84);
+    outline-offset: 0rem;
+}
+.container-card .card .imgBx{
+    position: relative;
+    width: 260px;
+    height: 200px;
+    top: -60px;
+    left: 7px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+.container-card .card .imgBx img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.container-card .card .imgBx h1{
+    margin: 5px 15px;
+    color: #dab53d;
+    font-size:20px ;
+}
+.container-card .card .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+.container-card .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: 10px;
+}
+.container-card .card .content .btn-vote{
+    color: white;
+    background-color: #B59F55;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    margin-left: 5px;
+}
+
+.container-card .card .content .btn-vote:hover{
+    background-color: #dab53d;
+    box-shadow: 0 5px 15px 0  rgba(255, 200, 3, 0.84);
+    /* box-shadow: 1px 2px 10px #eac444; */
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /*-------------Categories Section CSs--------------------*/

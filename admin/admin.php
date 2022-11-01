@@ -108,7 +108,9 @@ $users = $data->fetchAll(); // tatjib kolchi
                                 </td>
                                     <!-- button -->
                                 <td>
-                                    <i class="far fa-edit"></i>
+                                    <a href="ModifierCandidate.php?id=<?php echo $candidate["cand_id"];?>">
+                                        <i class="far fa-edit"></i>
+                                    </a>
                                     <a href="DeleteCandidate.php?id=<?php echo $candidate["cand_id"];?>">
                                         <i class="far fa-trash-alt"></i>
                                     </a>

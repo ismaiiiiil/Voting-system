@@ -99,9 +99,11 @@ input[type="radio"]:checked{
 
 footer{
     z-index: 3;
+    width: 100%;
     position: absolute;
-    bottom: 0;
+    /* button: 0; */
+    left: 0px;
     height: 100px;
     padding: 30px;
-    color:white;
+    color: white;
 }
