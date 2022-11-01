@@ -1,4 +1,5 @@
 <?php 
+    session_start();
       require("config.php");
   
       $query = "SELECT * FROM categories";
@@ -34,8 +35,8 @@
 
         <nav class="navbar">
             <a href="index.php">Home</a>
-            <!-- <a href="vote.php">vote</a> -->
-            <a href="result.php">result</a>
+            <a href="#footer">contact</a>
+            <a href="#category">categories</a>
         </nav>
 
         <div class="icons">
@@ -86,7 +87,7 @@
     <!-- blogs section ends -->
 
     <!-------------Footer Section---------------------->
-    <section class="footer">
+    <section id="footer" class="footer">
         <div class="box-container">
             <div class="box">
                 <h3><i class="fa-solid fa-check-to-slot"></i>Voting </h3>
@@ -124,7 +125,10 @@
     <!----------------Scripts------------------------->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
-
+    <?php include './admin/include/scripts.php';  
+    unset($_SESSION['status']);
+    unset($_SESSION['status_code']);
+    ?>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 <?php
 // --------------------------recuperation les donner 9dam----------------------------------
 // ila makanch id
+session_start();
 if(!isset($_GET["id"]))
 {
     header("Location:index.php");
@@ -117,7 +118,10 @@ if(isset($_GET["id"]))
 
     <!-- owl carousel cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+    <?php include './admin/include/scripts.php';  
+    unset($_SESSION['status']);
+    unset($_SESSION['status_code']);
+    ?>
 </body>
 
 </html>

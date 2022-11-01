@@ -103,7 +103,7 @@ if (isset($_GET["id"])) {
                     <p>Frontend Developer</p>
                 </div>
                 </div>
-                <a href="#">Vote Now</a>
+                <a href="addVote.php?id=<?php echo $candidate["cand_id"] ?>">Vote Now</a>
             </div>      
             <?php endforeach; ?>
         </div>
@@ -116,14 +116,6 @@ if (isset($_GET["id"])) {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/flipclock.js"></script>
     <script>
-    // $(document).ready(function(){
-    //     $(".sliders").owlCarousel({
-    //         loop: true,
-    //         autoplay: true,
-    //         autoplayTimeout: 3000,
-    //         autoplayHoverPause: true
-    //     });
-    // })
     var clock = $('.clock').FlipClock({
         clockFace: 'TwelveHourClock'
     });
