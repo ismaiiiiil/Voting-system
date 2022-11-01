@@ -181,11 +181,39 @@ img {
     align-items: self-start;
     padding: 0 20px 20px 20px;
 }
+/* ---------categories --------------- */
+.table-categories{
+    width: 90%;
+    margin: auto;
+    /* display: grid; */
+    /* grid-template-columns: 2fr 1fr; */
+    grid-gap: 20px;
+    align-items: self-start;
+    padding: 0 20px 20px 20px;
+}
+.categories-visiting {
+    min-height: auto;
+    /* background: #fff; */
+    background: #17171b 0% 0% no-repeat padding-box;
+    padding: 14px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.categories-visiting  .visiting td{
+    height: auto;
+}
+.img-categ-small {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+    overflow: hidden;
+}
 
+/* ------------------ */
 .img-box-small {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -497,7 +525,8 @@ input,select {
 
 @media(max-width:420px) {
     .last-appointments,
-    .doctor-visiting {
+    .doctor-visiting,
+    .categories-visiting {
         font-size: 70%;
         padding: 10px;
         min-height: 300px;

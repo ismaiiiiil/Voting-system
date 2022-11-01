@@ -1,5 +1,6 @@
 <?php
-include './CandidateControllers.php';
+include './../controller/CandidateControllers.php';
+
 $data = new CandidateController();
 $categories = $data->getAllcategories();
 if($_SESSION['status_code'] = 'success'){
@@ -15,7 +16,7 @@ if($_SESSION['status_code'] = 'success'){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -27,10 +28,10 @@ if($_SESSION['status_code'] = 'success'){
 <body>
     <div class="container-all">
         <!-- sidebar -->
-        <?php include('./include/sidebar.php') ?>
+        <?php include('./../include/sidebar.php') ?>
         <div class="main">
             <!-- NavBar -->
-            <?php include('./include/navbar.php') ?>
+            <?php include('./../include/navbar.php') ?>
             <!-- formulaire -->
             <div class="card-user">
                 <div class="card-header">
@@ -81,7 +82,7 @@ if($_SESSION['status_code'] = 'success'){
             </div>
         </div>
     </div>
-   <?php include './include/scripts.php';  ?>
+   <?php include './../include/scripts.php';   ?>
     
 </body>
 

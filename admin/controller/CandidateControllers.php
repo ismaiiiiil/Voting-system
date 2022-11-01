@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require   "./DB.php";
+require   "./../database/DB.php";
 
 class CandidateController{
 // ---------- select ----------------
@@ -50,7 +50,7 @@ public function newCandidate(){
         $category = htmlspecialchars(strtolower(trim($_POST["category"])));
         // ila makanch erreur
         if(!empty($firstname) && !empty($lastname) && !empty($birth_date) && !empty($category) && !empty($_FILES["candidate_image"]["name"]) ) {
-            $query = "INSERT into candidates value(NULL,:firstname,:lastname,:birth_date,:candidate_image,:category,NULL)";
+            $query = "INSERT into candidates value(NULL,:firstname,:lastname,:birth_date,:candidate_image,:category,0)";
             
             
             $stmt = DB::connect()->prepare($query);
@@ -78,7 +78,7 @@ public function newCandidate(){
     }
 }
 public function uploadPhoto($oldImage = null){
-    $dir = "../public/uploads"; // dossier fin timchiw
+    $dir = "./../../public/uploads"; // dossier fin timchiw
     $time = time(); // heur
     $name = str_replace(' ','-',strtolower($_FILES["candidate_image"]["name"])); // espace => '-'  , name="image" ->"image" 
     $type = $_FILES["candidate_image"]["type"]; // png , jpg .. ?
@@ -110,7 +110,8 @@ public function updateCandidate(){
             lastname=:lastname,
             birth_date=:birth_date,
             candidate_image=:candidate_image,
-            category=:category
+            category=:category,
+            votes=0
             WHERE cand_id=:cand_id
             ";
             
@@ -134,8 +135,6 @@ public function updateCandidate(){
             $_SESSION['status'] = 'Tous les champs sont Obligatoire';
             $_SESSION['status_code'] = 'error'; // info
             // header('Location: ajouterCadidate.php');
-
-
         };
         // echo var_dump($stmt);
     }

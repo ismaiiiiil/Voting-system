@@ -7,24 +7,25 @@
                 <div class="title">The Best One</div>
             </a>
         </li>
-        <li>
-            <a href="./admin.php">
-                <i class="fas fa-th-large"></i>
-                <div class="title">Admin</div>
-            </a>
-        </li>
+  
 
         <li>
-            <a href="#">
+            <a href="./admin.php">
                 <i class="fa-solid fa-users"></i>
                 <div class="title">Users</div>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="./adminCategories.php">
                 <!-- <i class="fas fa-puzzle-piece"></i> -->
                 <i class="fa-solid fa-medal"></i>
-                <div class="title">Candidates</div>
+                <div class="title">Categories</div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fas fa-th-large"></i>
+                <div class="title">Admin</div>
             </a>
         </li>
         <li>
