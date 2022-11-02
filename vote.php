@@ -1,5 +1,7 @@
 <?php
 // --------------------------recuperation les donner 9dam----------------------------------
+session_start();
+
 // ila makanch id
 if (!isset($_GET["id"])) {
     header("Location:index.php");
@@ -22,6 +24,8 @@ if (isset($_GET["id"])) {
 
     // ila kayn id fla base de donner
     if (count($data) == 0) {
+        $_SESSION['status'] = 'Désolé Category est vide en ce moment';
+        $_SESSION['status_code'] = 'info';
         header("Location:index.php");
     }
 
@@ -89,7 +93,15 @@ if (isset($_GET["id"])) {
                     <p>Frontend Developer</p>
                 </div>
                 </div>
-                <a href="addVote.php?id=<?php echo $candidate["cand_id"] ?>">Vote Now</a>
+                <?php
+                    $countDownDate = (int) strtotime("$date $h:$m:$s" )* 1000;
+                    $now =(int) time() *1000;
+                    $distance = $countDownDate - $now;
+                ?>
+                <?php if($distance >= 0) {?>
+                    <a href="addVote.php?id=<?php echo $candidate["cand_id"] ?>">Vote Now</a>
+                <?php }?>
+                
             </div>      
             <?php endforeach; ?>
         </div>
@@ -103,8 +115,7 @@ if (isset($_GET["id"])) {
     
     <!-- ----------- clock ------------ -->    
     <script>
-    var countDownDate = <?php 
-    echo strtotime("$date $h:$m:$s" ) ?> * 1000;
+    var countDownDate = <?php echo strtotime("$date $h:$m:$s" ) ?> * 1000;
     var now = <?php echo time() ?> * 1000;
 
     // Update the count down every 1 second
@@ -123,8 +134,8 @@ if (isset($_GET["id"])) {
     minutes + "m : " + seconds + "s ";
     // If the count down is over, write some text 
     if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("time").innerHTML = "EXPIRED";
+        clearInterval(x);
+        document.getElementById("time").innerHTML = "EXPIRED";
     }
     }, 1000);
 
