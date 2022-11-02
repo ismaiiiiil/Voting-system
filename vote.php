@@ -24,6 +24,16 @@ if (isset($_GET["id"])) {
     if (count($data) == 0) {
         header("Location:index.php");
     }
+
+    $stmt2 = $db->prepare('SELECT * from categories 
+                        where catg_id=:id');
+    $stmt2->execute(array(":id"=>$id)); 
+    while($res = $stmt2->fetch(PDO::FETCH_ASSOC)) {
+        $date = $res['end_date'];
+        $h = $res['h'];
+        $m = $res['m'];
+        $s = $res['s'];
+    }
 }
 
 
@@ -63,33 +73,9 @@ if (isset($_GET["id"])) {
 
     <div id="container">
         <!-- clock -->
-        <div class="clock"></div>
-
-
-
-        <!--<div class="sliders">
-            <?php //foreach ($data as $candidate) : ?>
-            <div class="cards">
-                <div class="profile">
-                    <div class="images">
-                        <img src="./public/uploads/<?php echo $candidate["candidate_image"]; ?>" alt="">
-                    </div>
-                </div>
-                <div class="info">
-                    <h2><?php echo $candidate["firstname"].' ' . $candidate["lastname"]; ; ?></h2>
-                </div>
-                <div class="messages">
-                    <button class="btns">Vote Now</button>
-                </div>
-            </div> -->
-
-            <?php //endforeach; ?>
-            <!-- card no 1 -->
-
-            <!-- duplicate card according to your need -->
-
-        <!-- </div> -->
-
+        <div id="clock">
+            <h1 class="time" id="time"></h1>
+        </div>
 
         <!-- version v2 -->
         <div class="wrapper">
@@ -114,11 +100,34 @@ if (isset($_GET["id"])) {
 
     <!-- owl carousel cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="js/flipclock.js"></script>
+    
+    <!-- ----------- clock ------------ -->    
     <script>
-    var clock = $('.clock').FlipClock({
-        clockFace: 'TwelveHourClock'
-    });
+    var countDownDate = <?php 
+    echo strtotime("$date $h:$m:$s" ) ?> * 1000;
+    var now = <?php echo time() ?> * 1000;
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    now = now + 1000;
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Output the result in an element with id="demo"
+    // --------------------
+    document.getElementById("time").innerHTML = days + "d " + hours + "h : " +
+    minutes + "m : " + seconds + "s ";
+    // If the count down is over, write some text 
+    if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("time").innerHTML = "EXPIRED";
+    }
+    }, 1000);
+
     </script>
 </body>
 

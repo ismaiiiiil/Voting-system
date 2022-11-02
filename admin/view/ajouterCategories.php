@@ -1,10 +1,9 @@
 <?php
-include './../controller/CandidateControllers.php';
-$data = new CandidateController();
-$categories = $data->getAllcategories();
-if($_SESSION['status_code'] = 'success'){
-    $data = new CandidateController();
-    $data->newCandidate();
+include './../controller/CategoriesControllers.php';
+
+if(isset($_POST['submit'])){
+    $data = new CategoryController();
+    $data->newCategory();
 }
 ?>
 
@@ -34,44 +33,42 @@ if($_SESSION['status_code'] = 'success'){
             <!-- formulaire -->
             <div class="card-user">
                 <div class="card-header">
-                    <i class="fa-solid fa-user-plus"></i>
-                    Ajouter Candidate
+                    <i class="fa-solid fa-medal"></i>
+                    Ajouter Category
                 </div>
                 <hr>
                 <div class="card-body">
                     <!-- -------- Form  ----------- -->
                     <form method="POST" enctype="multipart/form-data">
                         <div class="login-form">
-                            <label for="login">Nom de Candidate</label>
-                            <input type="text" name="firstname" id="login-id" placeholder="votre login" >
-                        </div>
-                        <div class="login-form">
-                            <label for="login">Prénom de Candidate</label>
-                            <input type="text" name="lastname" id="login-id" placeholder="votre prénom"
-                                >
+                            <label for="login">Nom de Category</label>
+                            <input type="text" name="catg_name" id="login-id" placeholder="Nom de Category" >
                         </div>
                         
-                        <div class="login-form">
-                            <label for="login">Date de Naissance</label>
-                            <input type="date" name="birth_date" id="login-id" placeholder="date de naissance"
-                                >
+                        <div class="date-form">
+                            <label for="login">End Date de Category</label>
+                            <div class="date-info">
+                                <div class="date">
+                                    <input type="date" name="end_date" id="login-id">
+                                </div>
+                                <div class="date">
+                                    <span> H*</span><input type="number" min="1" max="24" name="h" placeholder="00">
+                                </div>
+                                <div class="date">
+                                    <span> M*</span><input type="number" min="1" max="60" name="m" placeholder="00"> 
+                                </div>
+                                <div class="date">
+                                    <span> S*</span><input type="number" min="1" max="60" name="s" placeholder="00"> 
+                                </div>
+                            </div>
                         </div>
                         <div class="upload">
                             <button type="button" class="btn-warning">
                                 <i class="fa fa-upload"></i> Upload Image
-                                <input type="file" name="candidate_image" id="password-id" placeholder="mot de passe">
+                                <input type="file" name="image" id="password-id">
                             </button>
                         </div>
-                        <div class="login-form">
-                            <label for="category">Catégories*</label>
-                            <select class=""  name="category" id="login-id">
-                                <?php foreach($categories as $category) : ?>
-                                    <option value="<?php echo $category["catg_id"];?>">
-                                        <?php echo $category["catg_name"];?>
-                                    </option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
+                        
                         <div class="card-footer">
                             <input type="submit" name="submit" class="btn btn-primary" id="button-id" value="Ajouter" ></input>
                         </div>

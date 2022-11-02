@@ -47,8 +47,8 @@ if(isset($_POST['submit'])){
                 <div class="card-body">
                     <!-- -------- Form  ----------- -->
                     <form method="POST" enctype="multipart/form-data">
-                         <!-- -------- hidden ------------- -->
-                         <input type="hidden"  name="cand_id" 
+                        <!-- -------- hidden ------------- -->
+                        <input type="hidden"  name="cand_id" 
                             value="<?php echo $candidate->cand_id;?>">
                             <!-- ila ma3tanach image -->
                         <input type="hidden"  name="candidate_image" 

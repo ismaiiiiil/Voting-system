@@ -208,6 +208,15 @@ img {
     border-radius: 5%;
     overflow: hidden;
 }
+.img-categ-form{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 2rem;
+    border-radius: 5%;
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.884);
+    overflow: hidden;
+}
 
 /* ------------------ */
 .img-box-small {
@@ -349,7 +358,8 @@ form {
 }
 
 .login-form,
-.password-form {
+.password-form ,
+.date-form{
     width: 100%;
     height: auto;
     display: flex;
@@ -362,7 +372,37 @@ form {
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
-    border: .05px solid rgba(255, 200, 3, 0.884);
+
+    box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.884);
+}
+.date-form .date-info{
+    
+    display: flex;
+    
+}
+.date-form input[type='date']{
+    width: 150px;
+}
+.date-form input[type='number']{
+    width: 60px;
+    color: #17171b;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 5px;
+    border: 1px solid #d4d4d4;
+}
+.date-form span{
+    font-weight: bold;
+    margin-left: 5px;
+    color: #d9a400;
+   
+}
+.date-form input[type='date'] {
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    padding: 10px;
+    
+    padding-right: 5px;
 }
 .password-form {
     position: relative;
@@ -376,7 +416,7 @@ label {
     font-family: arial;
 }
 
-input,select {
+input[type='text'],input[type='select'],input[type='password'],input[type='date'],select {
     border: 1px solid #d4d4d4;
     border-radius: 10px;
     padding: 10px;
@@ -506,6 +546,13 @@ input,select {
 }
 
 @media(max-width:860px) {
+    .date-form .date-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .date{
+        margin-top: 5px;
+    }
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
