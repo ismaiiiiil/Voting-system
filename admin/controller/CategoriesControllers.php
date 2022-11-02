@@ -6,13 +6,12 @@ require   "./../database/DB.php";
 class CategoryController{
     public function newCategory(){
         if(isset($_POST["submit"])) {
-            
-            // la valeur li jaya mn form
+        
             $catg_name = htmlspecialchars(strtolower(trim($_POST["catg_name"])));
-            $end_date = htmlspecialchars(strtolower(trim($_POST["end_date"])));            // ila makanch erreur
-            $h = htmlspecialchars(strtolower(trim($_POST["h"])));            // ila makanch erreur
-            $m = htmlspecialchars(strtolower(trim($_POST["m"])));            // ila makanch erreur
-            $s = htmlspecialchars(strtolower(trim($_POST["s"])));            // ila makanch erreur
+            $end_date = htmlspecialchars(strtolower(trim($_POST["end_date"])));            
+            $h = htmlspecialchars(strtolower(trim($_POST["h"])));           
+            $m = htmlspecialchars(strtolower(trim($_POST["m"])));          
+            $s = htmlspecialchars(strtolower(trim($_POST["s"])));         
             if(!empty($catg_name) && !empty($end_date) && !empty($h)&& !empty($m)&& !empty($s) && !empty($_FILES["image"]["name"]) ) {
                 $query = "INSERT into categories value(NULL,:catg_name,:image,:end_date,:h,:m,:s)";
                 $stmt = DB::connect()->prepare($query);
@@ -34,10 +33,7 @@ class CategoryController{
                 $_SESSION['status'] = 'Tous les champs sont Obligatoire';
                 $_SESSION['status_code'] = 'error'; // info
                 // header('Location: ajouterCadidate.php');
-    
-    
             };
-            // echo var_dump($stmt);
         }
     }
     public function getCategory(){

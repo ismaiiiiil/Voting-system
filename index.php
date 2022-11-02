@@ -41,7 +41,7 @@
 
         <div class="icons">
             <a href="#" class="btn">Login</a>
-            <a href="signup.sign.html" class="btn">Register</a>
+            <a href="sign.html" class="btn">Register</a>
             <div class="fas fa-user" id="login-btn"></div>
             <!-- Logout 
             <hr>
@@ -56,7 +56,8 @@
 
     <section class="home" id="home">
         <div class="content">
-            <h3>Voting The best <span>¨Players</span> in The world</h3>
+            <h3>Globe Soccer Award <span>2022</span>.</h3>
+            <h3>VOTE FOR YOUR FAVOURITES .</h3>
             <a href="#category" class="btn">Vote Now</a>
         </div>
     </section>

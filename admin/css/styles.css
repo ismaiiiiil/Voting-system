@@ -251,10 +251,14 @@ td a{
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
-    background: #3286be;
+    background: #165ab8;
     color: #fff;
     text-decoration: none;
     text-align: center;
+}
+.btn-view:hover{
+    background-color: #3144ac;
+    box-shadow: 0 5px 15px 0  rgba(49, 120, 244, 0.84);
 }
 
 table {
@@ -416,7 +420,7 @@ label {
     font-family: arial;
 }
 
-input[type='text'],input[type='select'],input[type='password'],input[type='date'],select {
+input[type='text'],input[type='email'],input[type='select'],input[type='password'],input[type='date'],select {
     border: 1px solid #d4d4d4;
     border-radius: 10px;
     padding: 10px;
