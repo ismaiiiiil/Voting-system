@@ -73,22 +73,15 @@ if(isset($_GET["id"]))
 
     <div id="container">
         <!-- clock -->
-
-
-        <div class="sliders">
-            <?php foreach($data as $candidate) : ?>
-            <div class="cards">
-                <!-- profile images -->
-                <div class="profile">
-                    <div class="images">
-                        <img src="./public/uploads/<?php echo $candidate["candidate_image"]; ?>" alt="">
+        <div class="wrapper">
+        <?php foreach($data as $candidate) : ?>
+            <div class="card" >
+                <div class="content">
+                    <div class="img"><img src="./public/uploads/<?php echo $candidate["candidate_image"]; ?>" alt=""></div>
+                    <div class="details">
+                        <span class="name"><?php echo $candidate["firstname"] .' '.$candidate["lastname"] ;?></span>
+                        <p><span class="vote"><?php echo $candidate["votes"]; ?></span> voting</p>
                     </div>
-                </div>
-                <div class="info">
-                    <!-- user name -->
-                    <h2><?php echo $candidate["firstname"] .' '.$candidate["lastname"] ;?></h2>
-                    <p><span><?php echo $candidate["votes"]; ?></span> voting</p>
-
                 </div>
                 <?php
                     $sum = (int) $sum_vote;
@@ -102,15 +95,9 @@ if(isset($_GET["id"]))
                         <div class="value-bar"></div>
                     </div>
                 </div>
-            </div>
-
-            <?php endforeach; ?>
-
-
+            </div>    
+        <?php endforeach; ?>
         </div>
-
-
-    </div>
     </div>
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

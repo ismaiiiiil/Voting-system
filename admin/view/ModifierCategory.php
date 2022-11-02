@@ -70,12 +70,6 @@ if(isset($_POST['submit'])){
                                 >
                             </button>
                         </div>
-                        <div class="login-form">
-                            <label for="login">End Date de Category</label>
-                            <input type="date" name="end_date" id="login-id" placeholder="date de naissance"
-                            value="<?php echo $category->end_date ;?>"
-                                >
-                        </div>
                         <div class="date-form">
                             <label for="login">End Date de Category</label>
                             <div class="date-info">
