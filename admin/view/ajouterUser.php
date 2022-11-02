@@ -43,9 +43,9 @@
                             <label for="login">Email</label>
                             <input type="text" name="login" id="login-id" placeholder="votre email" required="required">
                         </div>
-                        <div class="login-form">
+                        <div class="date-form">
                             <label for="login">Date de Naissance</label>
-                            <input type="text" name="login" id="login-id" placeholder="votre date de naissance"
+                            <input type="date" name="login" id="login-id" placeholder="votre date de naissance"
                                 required="required">
                         </div>
                         <div class="password-form">

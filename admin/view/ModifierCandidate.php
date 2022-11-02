@@ -65,7 +65,7 @@ if(isset($_POST['submit'])){
                             value="<?php echo $candidate->lastname ;?>">
                         </div>
                         
-                        <div class="login-form">
+                        <div class="date-form">
                             <label for="login">Date de Naissance</label>
                             <input type="date" name="birth_date" id="login-id" placeholder="date de naissance"
                             value="<?php echo $candidate->birth_date ;?>">
