@@ -90,7 +90,7 @@ if (isset($_GET["id"])) {
                 <div class="img"><img src="./public/uploads/<?php echo $candidate["candidate_image"]; ?>" alt=""></div>
                 <div class="details">
                     <span class="name"><?php echo $candidate["firstname"].' ' . $candidate["lastname"]; ; ?></span>
-                    <p>Frontend Developer</p>
+                    <p><?php echo $candidate["catg_name"] ;?></p>
                 </div>
                 </div>
                 <?php

@@ -303,11 +303,12 @@ header {
     /* background: url("https://cdn.pixabay.com/photo/2016/05/20/21/57/football-1406106__340.jpg"); */
     /* background: url("https://cdn.pixabay.com/photo/2016/05/20/21/57/football-1406106__340.jpg"); */
     background-position: center;
-    background-size:contain;
+    background-size:cover;
+    background-repeat: no-repeat;
     /* background-size:cover; */
     padding-top: 17rem;
     padding-bottom: 5rem;
-    height: 55rem;
+    height: 60rem;
     /* margin-top: 23rem; */
 }
 .home .content {
@@ -317,7 +318,8 @@ header {
 }
 
 .home .content h3 {
-    color: #fff;
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgb(230, 201, 10),  0 0 20px rgba(10, 175, 230, 0);
     font-size: 3rem;
 }
 
@@ -348,47 +350,6 @@ header {
 
 /*-------------Categories Section CSs--------------------*/
 
-.categories .box-container {
-    /* display: grid; */
-    /* grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr)); */
-    /* gap: 1.5rem; */
-}
-/*
-.categories .box-container .box {
-    padding: 3rem 2rem;
-    border-radius: .5rem;
-    background:#14141b 0% 0% no-repeat padding-box;
-    ;*/
-    /* box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 1); */
-  /*  outline: .1rem solid rgba(0, 0, 0, .1);
-    outline-offset: -1rem;
-    text-align: center;
-}*/
-/*
-.categories .box-container .box:hover {
-    outline: .2rem solid rgba(255, 200, 3, 0.84);
-    outline-offset: 0rem;
-}
-
-.categories .box-container .box img {
-    margin: 1rem 0;
-    width: 100%;
-    border-radius: 3px;
-    height: 18rem;
-}
-
-.categories .box-container .box h3 {
-    font-size: 2rem;
-    color: #fff;
-    line-height: 1.8;
-}
-
-.categories .box-container .box p {
-    font-size: 1.7rem;
-    color: #666;
-    line-height: 1.8;
-    padding: 1rem 0;
-} */
 /* -----------  version v2 categories ---------------- */
 
 .container-card{

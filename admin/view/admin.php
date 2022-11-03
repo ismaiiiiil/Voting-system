@@ -68,9 +68,15 @@ $users = $data->fetchAll(); // tatjib kolchi
                                     <?php echo $user['birth_date'] ?>
                                 </td>
                                 <td class="icon">
-                                    <i class="far fa-eye"></i>
+                                    <a onClick="return confirm('Are you sure you want to Modifier?')" type='button' href="ModifierUser.php?id=<?php echo $user['user_id'];?>">
+                                        <i class="far fa-edit"></i>
+                                    </a>
+                                    <a onClick="return confirm('Are you sure you want to delete?')" type='button' href="DeleteUser.php?id=<?php echo $user["user_id"];?>">
+                                        <i class="far fa-trash-alt"></i>
+                                    </a>
+                                    <!-- <i class="far fa-eye"></i>
                                     <i class="far fa-edit"></i>
-                                    <i class="far fa-trash-alt"></i>
+                                    <i class="far fa-trash-alt"></i> -->
                                 </td>
                             </tr>
                             <?php endforeach; ?>

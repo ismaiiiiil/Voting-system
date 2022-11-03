@@ -1,11 +1,12 @@
 <?php
 include './../controller/UserControllers.php';
 
+$data = new UserController();
+$user=$data->getUser();
 if(isset($_POST['submit'])){
     $data = new UserController();
-    $data->newUser();
+    $data->updateUser();
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,43 +35,49 @@ if(isset($_POST['submit'])){
             <div class="card-user">
                 <div class="card-header">
                     <i class="fa-solid fa-user-plus"></i>
-                    Ajouter Users
+                    Modifier Users
                 </div>
                 <hr>
                 <div class="card-body">
                     <form method="POST">
+                        <!-- hidden -->
+                        <input type="hidden"  name="user_id" 
+                            value="<?php echo $user->user_id;?>">
                         <div class="login-form">
                             <label for="firstname">Nom d'utilisateur</label>
-                            <input type="text" name="firstname" id="login-id" placeholder="votre login">
+                            <input type="text" name="firstname" id="login-id" placeholder="votre login"
+                            value="<?php echo $user->firstname; ?>">
                         </div>
                         <div class="login-form">
                             <label for="lastname">Prénom d'utilisateur</label>
                             <input type="text" name="lastname" id="login-id" placeholder="votre prénom"
-                            >
+                            value="<?php echo $user->lastname; ?>">
                         </div>
                         <div class="login-form">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="login-id" placeholder="votre email">
+                            <input type="email" name="email" id="login-id" placeholder="votre email"
+                            value="<?php echo $user->email; ?>"
+                            />
                         </div>
                         <div class="date-form">
                             <label for="birth_date">Date de Naissance</label>
                             <input type="date" name="birth_date" id="login-id" placeholder="votre date de naissance"
-                            >
+                            value="<?php echo $user->birth_date; ?>"
+                            />
                         </div>
                         <div class="password-form">
                             <label for="user_password">Mot de passe</label>
                             <input type="password" name="user_password" id="password-id" placeholder="votre mot de passe"
-                            >
-                            <!-- <img src="./icones/eye-slash.svg" alt="icone" class="eye" id="eye-id"> -->
+                            value="<?php echo $user->user_password; ?>"
+                            />
                             <span class="eye" id="eye-id">
                                 <i class="fa-solid fa-eye-slash"></i>
                             </span>
                         </div>
                         <div class="password-form">
                             <label for="user_password2">Confirm Mot de passe</label>
-                            <input type="password" name="user_password2" id="password-id" placeholder="Confirm mot de passe"
-                            >
-                            <!-- <img src="./icones/eye-slash.svg" alt="icone" class="eye" id="eye-id"> -->
+                            <input type="password" name="user_password2" id="password-id" placeholder="Confirm mot de passe"                            
+                            />
                             <span class="eye" id="eye-id">
                                 <i class="fa-solid fa-eye-slash"></i>
                             </span>

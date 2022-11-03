@@ -26,9 +26,6 @@ if(isset($_GET["id"]))
         $stmt->execute(array(":id"=>$id)); 
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 // ------------
-        $sum = "SELECT sum(votes) from candidates
-                JOIN categories on categories.catg_id=candidates.category
-                where category=:id"; 
         $stmt->execute(array(":id"=>$id)); 
         $sum_vote = 0;
         while($row1 = $stmt->fetch(PDO::FETCH_ASSOC)) {
