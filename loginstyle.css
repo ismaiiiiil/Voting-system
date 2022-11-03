@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+
+header{
+    z-index: 4;
+    position: relative;
+    background-color: #1e1f1fac;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+  }
+nav{
+    display: flex;
+    align-items: center;
+}
+nav a{
+    font-size: 13pt;
+    margin-left: 50px;
+    margin-right: 30px;
+}
+  header a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-size: 15pt;
+    font-family: "roboto condensed";
+
+  }
+  header a:hover{
+    color:#B59F55;
+  }
+  #target{
+   margin-left: 10px;
+    color: #B59F55; 
+    font-size: 2.2em;
+    font-family: "roboto condensed";
+
+}
+
+#target span{
+    display: none;
+}
+
+#target:hover  span{
+    display: inline;
+    color: #eac444;
+}
+
+#target:hover {
+    color: #eac444;
+}
+.stars{
+    background: url(stars.png) repeat top center;
+    z-index: 0;
+    background-size: cover;
+}
+@keyframes move-twink-back{
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+.stars, .twinkling{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    
+  }
+.twinkling{
+    background:transparent url(twinkling.png) repeat top center;
+    z-index:1;
+    animation:move-twink-back 200s linear infinite;
+  }
+main{
+    display: flex;
+   
+    align-items: center;
+}
+.container{
+    position: relative;
+    background-color: rgba(52, 49, 49, 0.4);
+    color: #ffffff;
+    height: 360px;
+    border-radius: 30px;
+    margin-top: 70px;
+    z-index: 3;
+    box-shadow: 0 0 7px 7px rgba(255, 255, 255, 0.138);
+}
+
+
+.input-text input{
+    background-color: rgb(55, 55, 55, 0);
+    width: 80%;
+    color: white;
+    outline: none;
+    margin-left: 10px;
+    border:none;
+    border-bottom: 2px solid rgb(153, 153, 153);
+}
+
+input[type="submit"]{
+    color: white;
+    background-color: #B59F55;
+    border-radius: 20px;
+    margin-left: 5px;
+}
+
+input[type="submit"]:hover, #register:hover{
+    background-color: #dab53d;
+    box-shadow: 1px 2px 10px #eac444;
+}
+
+#register{
+    color: white;
+    background-color: #B59F55;
+    border-radius: 20px;
+    width: 110px;
+    height: 35px;
+    text-align: center;
+   
+}
+
+
+
+
+#signup{
+    color: #ffffff;
+    text-decoration: none;
+}
+#signup:hover{
+    color: #B59F55;
+}
+#newaccount{
+    color: #8c94a1;
+}
+
+
+footer{
+    z-index: 3;
+    position: absolute;
+    left: 0px;
+    height: 100px;
+    padding: 30px;
+    color:white;
+
+}
+

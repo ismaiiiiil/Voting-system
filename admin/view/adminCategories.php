@@ -61,7 +61,7 @@ $categories = $data->getAllcategories();
                                     <?php echo $category['catg_name'] ; ?>
                                 </td>
                                 <td>
-                                    <?php echo $category['end_date'] . ' '.$category['h'] . ' h : '.$category['m'] . ' m : '. $category['s'] . ' s'; ?>
+                                    <?php echo $category['end_date'] . ' '.$category['h'] . ' h : '. $category['m'] . ' m : '. $category['s'] . ' s'; ?>
                                 </td>
                                     <!-- button -->
                                 <td>

@@ -41,7 +41,7 @@
 
         <div class="icons">
             <a href="#" class="btn">Login</a>
-            <a href="signup.sign.html" class="btn">Register</a>
+            <a href="signup.php" class="btn">Register</a>
             <div class="fas fa-user" id="login-btn"></div>
             <!-- Logout 
             <hr>
