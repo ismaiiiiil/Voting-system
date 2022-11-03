@@ -136,28 +136,28 @@
             <div class="row input-text"  id="fullname">
                 <div class="col-md-6">
                     <label for="firstname" class="form-label">First name <span class="required-span">*</span></label><br>
-                    <input type="text" class="from-control" id="firstname" name="firstname" placeholder="Enter firstname">
+                    <input type="text" autocomplete="off" class="from-control" id="firstname" name="firstname" placeholder="Enter firstname">
                 </div>
                 <div class="col-md-6">
                     <label for="lastname" class="form-label ">Last name <span class="required-span">*</span></label><br>
-                    <input type="text" class="from-control" id="lastname" name="lastname" placeholder="Enter last name">
+                    <input type="text" autocomplete="off" class="from-control" id="lastname" name="lastname" placeholder="Enter last name">
                 </div>
             </div>
             <div class="row mt-4  input-text">
                 <div class="col-md-6">
                     <label class="form-label" for="Email">Email Address<span class="required-span"> *</span></label><br>
-                    <input type="email" class="from-control" maxlength="100"   id="Email" name="email" placeholder="Enter email address">
+                    <input type="email" autocomplete="off" class="from-control" maxlength="100"   id="Email" name="email" placeholder="Enter email address">
                 </div>
             </div>
             <div class="row mt-4 input-text" id="password">
                 <div class="col-md-6">
                     <label for="password" class="form-label">Password <span class="required-span">*</span></label><br>
-                    <input type="password" class="from-control" id="password" name="password" placeholder="Enter password">
+                    <input type="password" autocomplete="off" class="from-control" id="password" name="password" placeholder="Enter password">
                     <i class="far fa-eye-slash ico-password" data-password="#Password"></i>
                 </div>
                 <div class="col-md-6 ">
                     <label for="confirmpass" class="form-label ">Confirm Password <span class="required-span">*</span></label><br>
-                    <input type="password" id="confirmpass" name="confirmpass" placeholder="Re-enter password">
+                    <input type="password" autocomplete="off" id="confirmpass" name="confirmpass" placeholder="Re-enter password">
                 </div>
             </div>
             <div class="col-12 mt-4 passwordReqs">
@@ -178,7 +178,7 @@
             <div class="row mt-5 input-text">
                 <div class="col-md-6 form-group">
                         <label class="form-label">Date of Birth </label><br>
-                        <input id="datepicker"  type="text" onfocus="(this.type='date')" name="DateOfBirth" placeholder="Select date of birth">      
+                        <input autocomplete="off" id="datepicker"  type="text" onfocus="(this.type='date')" name="DateOfBirth" placeholder="Select date of birth">      
                 </div>
                 <div class="col-md-6 form-group">
                     <label class="form-label" for="Gender">Gender</label>
