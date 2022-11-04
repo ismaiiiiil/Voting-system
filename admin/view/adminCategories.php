@@ -53,7 +53,7 @@ $categories = $data->getAllcategories();
                             <tr>
                                 <td>
                                     <div class="img-categ-small">
-                                        <img src="./../../public/uploads/<?php echo $category['image']; ?>"
+                                        <img class="img" src="./../../public/uploads/<?php echo $category['image']; ?>"
                                             alt="">
                                     </div>
                                 </td>

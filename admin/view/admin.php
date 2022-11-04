@@ -102,7 +102,7 @@ $users = $data->fetchAll(); // tatjib kolchi
                             <tr>
                                 <td>
                                     <div class="img-box-small">
-                                        <img src="./../../public/uploads/<?php echo $candidate['candidate_image']; ?>"
+                                        <img class="img" src="./../../public/uploads/<?php echo $candidate['candidate_image']; ?>"
                                             alt="">
                                     </div>
                                 </td>

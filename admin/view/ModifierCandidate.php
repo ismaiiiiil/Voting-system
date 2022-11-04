@@ -71,7 +71,7 @@ if(isset($_POST['submit'])){
                             value="<?php echo $candidate->birth_date ;?>">
                         </div>
                         <div class="login-form">
-                            <img src="./../../public/uploads/<?php echo $candidate->candidate_image ;?>" alt="">
+                            <img class="img" src="./../../public/uploads/<?php echo $candidate->candidate_image ;?>" alt="">
                         </div>
                         <div class="upload">
                             <button type="button" class="btn-warning">

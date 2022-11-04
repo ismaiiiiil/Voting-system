@@ -19,7 +19,8 @@
                 <li>
                     <div class="text" href="#">
                         <p>Ismail Rharraf<br> <span>Admin</span></p>
-                        <div class="img">
+                        <div class="profil">
+                            <img class="profil" src="./../img/Profile.png" width="40px" alt="">
                             <i class="fas fa-angle-down"></i>
                         </div>
                         

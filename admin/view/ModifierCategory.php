@@ -60,7 +60,7 @@ if(isset($_POST['submit'])){
                         </div>
                         
                         <div class="img-categ-form">
-                            <img src="./../../public/uploads/<?php echo $category->image ;?>" alt="">
+                            <img class="img" src="./../../public/uploads/<?php echo $category->image ;?>" alt="">
                         </div>
                         <div class="upload">
                             <button type="button" class="btn-warning">
