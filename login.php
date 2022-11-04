@@ -17,6 +17,7 @@
             if($count_row ==1 && !empty($data)){
                 $_SESSION['email'] = $data['email'];
                 $_SESSION['password'] = $data['password'];
+                $_SESSION['user_id'] = $data['user_id'];
                 header('location: index.php');
             } else{
                 echo "<h1 style='color:white'>This account doesn't exist or the password/email is incorrect</h1>";

@@ -176,3 +176,18 @@ header {
     color: #daf6ff;
     text-shadow: 0 0 20px rgb(230, 201, 10),  0 0 20px rgba(10, 175, 230, 0);
 }
+.mssg{
+    font-family: 'Share Tech Mono', monospace;
+    display: flex;
+    font-size: 20px;
+    margin: 1.5rem 0rem;
+    justify-content: center;
+    /* margin: auto; */
+    color: #fb002e;
+    text-shadow: 0 0 20px rgb(255 0 12), 0 0 20px rgb(10 175 230 / 0%);
+}
+.voted{
+    font-size: 1.4rem;
+    color: #1cbb23;
+    text-shadow: 0 0 20px rgb(48 195 54), 0 0 20px rgb(10 175 230 / 0%);
+}

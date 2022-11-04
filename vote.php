@@ -7,6 +7,12 @@ if (!isset($_GET["id"])) {
     header("Location:index.php");
 }
 
+if (!isset($_SESSION["user_id"])) {
+    $_SESSION['status'] = 'Il faut connecter avant de voter';
+    $_SESSION['status_code'] = 'info';
+    header("Location:index.php");
+}
+
 
 
 if (isset($_GET["id"])) {
@@ -21,6 +27,7 @@ if (isset($_GET["id"])) {
     $stmt = $db->prepare($query);
     $stmt->execute(array(":id" => $id));
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // var_dump($data);
 
     // ila kayn id fla base de donner
     if (count($data) == 0) {
@@ -38,6 +45,35 @@ if (isset($_GET["id"])) {
         $m = $res['m'];
         $s = $res['s'];
     }
+    // $query = $db->prepare('SELECT * from voting where catg_id=:id');
+    // $query->execute(array(":id"=>$id)); 
+    // $exit = 0;
+    // while($voting = $query->fetch(PDO::FETCH_ASSOC)) {
+    //         if($voting['user_id']===$_SESSION['user_id'] && $voting['catg_id']===$id):
+    //             $exit = 1;
+    //         endif;
+    // }
+    $stmt1 = $db->prepare('SELECT * from voting 
+                            JOIN users on voting.user_id=users.user_id
+                            JOIN categories on voting.catg_id=categories.catg_id
+                        where voting.user_id=:user_id and  voting.catg_id=:catg_id
+                        ');
+    $stmt1->execute(array(
+                    ":user_id"=>$_SESSION["user_id"],
+                    ":catg_id"=>$id
+                ));
+    $data1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+    // $exit = 0;
+    $Voted =false;
+    if(count($data1) >0){
+        // $_SESSION['status'] = 'Tu as déja voter dans cette categorie';
+        // $_SESSION['status_code'] = 'info';
+        // header("Location:index.php");
+        $Voted = true;
+    }
+
+
+
 }
 
 
@@ -57,11 +93,13 @@ if (isset($_GET["id"])) {
     <link rel="stylesheet" href="css/vote.css">
     <!-- owl caousel cdn ( css )-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
 </head>
 
 
 <body>
     <header class="header">
+        
         <!-- <h1 href="#" class="logo"><i class="fa-solid fa-check-to-slot"></i>Voting</h1> -->
         <h3 href="#" class="logo">
             <img src="./assets/logo2.png" width="35px" height="35px" alt="">
@@ -79,8 +117,9 @@ if (isset($_GET["id"])) {
         <!-- clock -->
         <div id="clock">
             <h1 class="time" id="time"></h1>
+            
         </div>
-
+        
         <!-- version v2 -->
         <div class="wrapper">
             <?php foreach ($data as $candidate) : ?>
@@ -98,9 +137,20 @@ if (isset($_GET["id"])) {
                     $now =(int) time() *1000;
                     $distance = $countDownDate - $now;
                 ?>
-                <?php if($distance >= 0) {?>
-                    <a href="addVote.php?id=<?php echo $candidate["cand_id"] ?>">Vote Now</a>
-                <?php }?>
+
+                <?php
+                if($distance >= 0 ){
+                    if($Voted === false ) {?>
+                        <a href="addVote.php?id=<?php echo $candidate["cand_id"]; ?>&category=<?php echo $candidate["category"]; ?>">Vote Now</a>
+                    <?php }else{ ?>
+                        <h1 class='voted'>
+                            <i class="fa-solid fa-check"></i>    
+                            Voted
+                        </h1>
+                <?php 
+                    }
+                }
+                ?>
                 
             </div>      
             <?php endforeach; ?>

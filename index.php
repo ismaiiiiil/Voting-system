@@ -1,10 +1,10 @@
 <?php 
     session_start();
-      require("config.php");
-  
-      $query = "SELECT * FROM categories";
-      $data = $db->query($query); // PDOStatment -- CURSEUR
-      $data = $data->fetchAll(); // tatjib kolchi
+
+    require("config.php");
+    $query = "SELECT * FROM categories";
+    $data = $db->query($query); // PDOStatment -- CURSEUR
+    $data = $data->fetchAll(); // tatjib kolchi
 
 ?>
 
@@ -26,7 +26,6 @@
 
 <body>
     <header class="header">
-        <!-- <h1 href="#" class="logo"><i class="fa-solid fa-check-to-slot"></i>Voting</h1> -->
         <h1 href="#" class="logo">
             <img src="./assets/logo2.png" width="35px" height="35px" alt="">
             Voting
@@ -40,13 +39,14 @@
         </nav>
 
         <div class="icons">
-            <a href="#" class="btn">Login</a>
-            <a href="signup.php" class="btn">Register</a>
-            <div class="fas fa-user" id="login-btn"></div>
-            <!-- Logout 
+            <?php if( !isset($_SESSION['user_id'])){  ?>
+            <a href="signup.php" class="btn">login</a>
+             <!-- Logout  -->
+            <?php }else{  ?>
             <hr>
-            <a href="#" class="btn">Logout</a>
-            <div class="fa-solid fa-right-to-bracket" id="login-btn"></div> -->
+            <a href="./logout.php" class="btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <?php } ?>
+
         </div>
 
     </header>
@@ -77,6 +77,7 @@
                 </div>
                 <div class="content">
                     <a class="btn-vote" href="vote.php?id=<?php echo $category["catg_id"];?>">Voting Now</a>
+                    <!-- <a class="btn-vote" href="result.php?id=<?php echo $category["catg_id"];?>">Result</a> -->
                 </div>
             </div>
         <?php endforeach; ?>
@@ -129,6 +130,7 @@
     <?php include './admin/include/scripts.php';  
     unset($_SESSION['status']);
     unset($_SESSION['status_code']);
+    
     ?>
 </body>
 

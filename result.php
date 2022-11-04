@@ -2,10 +2,10 @@
 // --------------------------recuperation les donner 9dam----------------------------------
 // ila makanch id
 session_start();
-if(!isset($_GET["id"]))
-{
-    header("Location:index.php");
-}
+// if(!isset($_GET["id"]))
+// {
+//     header("Location:index.php");
+// }
 
 
 
