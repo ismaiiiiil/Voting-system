@@ -1,8 +1,13 @@
 
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script type="text/javascript" src="./../js/handleEye.js"></script>
-
+<script type="text/javascript" src="./../js/handleEye.js"></script>
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<script>
+	document.querySelector(".right ul li").addEventListener("click", function(){
+		this.classList.toggle("active");
+	});
+</script>
 
  <script>
     <?php
@@ -21,4 +26,5 @@
     ?>
 </script>
 <!-- script SweetAlert -->
+
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

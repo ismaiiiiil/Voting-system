@@ -65,6 +65,23 @@ if(isset($_POST['submit'])){
                             value="<?php echo $user->birth_date; ?>"
                             />
                         </div>
+                        <div class="login-form">
+                            <label for="">Gender</label>
+                            <div class="radio">
+                                <label class="">  
+                                    <input type="radio" name="gender" value="male"
+                                    <?php echo $user->gender === "male" ? "checked" : ""?> >
+                                    <span> Male </span> 
+                                </label>
+                                <label class="r2"> 
+                                    <input type="radio" name="gender" value="female"
+                                    <?php echo $user->gender === "female" ? "checked" : ""?>
+                                    >
+                                    <span>Female </span>                  
+                                </label>
+                            </div>
+                        </div>
+                       
                         <div class="password-form">
                             <label for="user_password">Mot de passe</label>
                             <input type="password" name="user_password" id="password-id" placeholder="votre mot de passe"

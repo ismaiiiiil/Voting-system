@@ -13,18 +13,20 @@ class UserController{
                 $email = htmlspecialchars(strtolower(trim($_POST["email"])));            
                 $user_password = htmlspecialchars(strtolower(trim($_POST["user_password"])));            
                 $user_password2 = htmlspecialchars(strtolower(trim($_POST["user_password2"])));            
-                if(!empty($firstname) && !empty($lastname) && !empty($birth_date) && !empty($email) && !empty($user_password)&& !empty($user_password2))
+                $gender = htmlspecialchars(strtolower(trim($_POST["gender"])));            
+                if(!empty($firstname) && !empty($lastname) && !empty($birth_date) && !empty($email) && !empty($user_password)&& !empty($user_password2)&& !empty($gender))
                 {
                     if($user_password == $user_password2)
                     {
-                        $query = "INSERT into users values(NULL, :firstname, :lastname, :birth_date,:email, :user_password)"; 
+                        $query = "INSERT into users values(NULL, :firstname, :lastname, :birth_date,:email, :user_password,:gender)"; 
                         $stmt = DB::connect()->prepare($query);
                         $stmt->execute(array(
                                         ":firstname"=> $firstname,
                                         ":lastname"=> $lastname,
                                         ":birth_date"=> $birth_date,
                                         ":email"=> $email,
-                                        ":user_password"=>$user_password
+                                        ":user_password"=>$user_password,
+                                        ":gender"=>$gender
                                     ));
                         $_SESSION['status'] = 'User est ajouter';
                         $_SESSION['status_code'] = 'success'; // info
@@ -80,7 +82,8 @@ class UserController{
                 $email = htmlspecialchars(strtolower(trim($_POST["email"])));            
                 $user_password = htmlspecialchars(strtolower(trim($_POST["user_password"])));            
                 $user_password2 = htmlspecialchars(strtolower(trim($_POST["user_password2"])));            
-                if(!empty($firstname) && !empty($lastname) && !empty($birth_date) && !empty($email) && !empty($user_password)&& !empty($user_password2))
+                $gender = htmlspecialchars(strtolower(trim($_POST["gender"])));            
+                if(!empty($firstname) && !empty($lastname) && !empty($birth_date) && !empty($email) && !empty($user_password)&& !empty($user_password2) && !empty($gender))
                 {
                     if($user_password == $user_password2)
                     {
@@ -89,7 +92,8 @@ class UserController{
                         lastname=:lastname,
                         birth_date=:birth_date,
                         email=:email,
-                        user_password=:user_password
+                        user_password=:user_password,
+                        gender=:gender
                         WHERE user_id=:id"; 
                         $stmt = DB::connect()->prepare($query);
                         $stmt->execute(array(
