@@ -103,7 +103,7 @@
 
             <div class="content effect">
               <!-- <img src="assets/log1.png" alt="bannner image" /> -->
-              <img src="assets/log1.png" alt="bannner image" />
+              <img src="assets/rank.png" alt="bannner image" />
             </div>
           </div>
         </div>
@@ -141,33 +141,43 @@
 
     <!-- ----------FeedBack ------------ -->
     <h1  id="category" class="heading">Your <span>FeedBack</span></h1>
-    <div class="feedback">
-      <div class="post">
-        <div class="text">Thanks for rating us!</div>
-        <div class="edit">EDIT</div>
-      </div>
-      <div class="star-widget">
-        <input type="radio" name="rate" value="I just hate it " id="rate-5">
-        <label for="rate-5" class="fas fa-star"></label>
-        <input type="radio" name="rate" value="I don't like it " id="rate-4">
-        <label for="rate-4" class="fas fa-star"></label>
-        <input type="radio" name="rate" value="It is awesome " id="rate-3">
-        <label for="rate-3" class="fas fa-star"></label>
-        <input type="radio" name="rate" value="I just like it " id="rate-2">
-        <label for="rate-2" class="fas fa-star"></label>
-        <input type="radio" name="rate" value="I just love it " id="rate-1" >
-        <label for="rate-1" class="fas fa-star"></label>
-        <form action="#">
-          <header class="head"></header>
-          <div class="textarea">
-            <textarea cols="30" placeholder="Describe your experience.."></textarea>
-          </div>
-          <div class="btn-form">
-            <button name="submit" type="submit">Post</button>
-          </div>
-        </form>
-      </div>
-    </div>
+        <div class="contents">
+            <div class="content effect">
+                <!-- <img src="assets/log1.png" alt="bannner image" /> -->
+                <img src="assets/win1.png" alt="bannner image" />
+            </div>
+            <div class="content">
+                <div class="feedback">
+                <div class="post">
+                    <div class="text">Thanks for rating us!</div>
+                    <div class="edit">EDIT</div>
+                </div>
+                <div class="star-widget">
+                    <input type="radio" name="rate" value="I just hate it " id="rate-5">
+                    <label for="rate-5" class="fas fa-star"></label>
+                    <input type="radio" name="rate" value="I don't like it " id="rate-4">
+                    <label for="rate-4" class="fas fa-star"></label>
+                    <input type="radio" name="rate" value="It is awesome " id="rate-3">
+                    <label for="rate-3" class="fas fa-star"></label>
+                    <input type="radio" name="rate" value="I just like it " id="rate-2">
+                    <label for="rate-2" class="fas fa-star"></label>
+                    <input type="radio" name="rate" value="I just love it " id="rate-1" >
+                    <label for="rate-1" class="fas fa-star"></label>
+                    <form action="#">
+                    <header class="head"></header>
+                    <div class="textarea">
+                        <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                    </div>
+                    <div class="btn-form">
+                        <button name="submit" type="submit">Post</button>
+                    </div>
+                    </form>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    
 
     <!-- blogs section ends -->
 
