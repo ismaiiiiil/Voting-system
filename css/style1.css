@@ -904,6 +904,9 @@ section {
     .content{
       flex-direction: column;
     }
+    .feedback{
+      margin: auto 2rem;
+    }
     .content-title {
       font-style: normal;
       font-weight: bold;
@@ -951,6 +954,9 @@ section {
       flex-direction: column;
     }
   
+    .feedback{
+      margin: auto 2rem;
+    }
     .content-title {
       font-style: normal;
       font-weight: bold;
