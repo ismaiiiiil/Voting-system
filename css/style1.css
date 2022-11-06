@@ -56,7 +56,7 @@ section {
     padding: .5rem 3rem;
     clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
 }
-
+/*
 .btn {
     margin-top: 1rem;
     display: inline-block;
@@ -64,21 +64,18 @@ section {
     font-size: 1.7rem;
     border-radius: .5rem;
     background-color: #B59F55;
-    /* background:transparent linear-gradient(116deg, #E59132 0%, #B59F55 100%) 0% 0% no-repeat padding-box !important; */
     color: #fff;
     cursor: pointer;
-    /* background: none; */
 }
 
 .btn:hover {
-    /* box-shadow: #ff7800; */
     background-color: #dab53d;
     box-shadow: 0 5px 15px 0  rgba(255, 200, 3, 0.84);
-}
+} */
 
 /*------Header Section CSS------------------*/
 
-.header {
+/* .header {
     position: fixed;
     top: 0;
     left: 0;
@@ -89,9 +86,8 @@ section {
     align-items: center;
     padding: 2rem 9%;
     background: #26282f 0% 0% no-repeat padding-box;
-    /* box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 1); */
-}
-
+} */
+/* 
 .header .logo {
     display: flex;
     flex-direction: row;
@@ -138,9 +134,9 @@ section {
 #menu-btn {
     display: none;
 }
+ */
 
-
-.header .search-form {
+/* .header .search-form {
     position: absolute;
     top: 110%;
     right: -110%;
@@ -152,9 +148,8 @@ section {
     display: flex;
     align-items: center;
     box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 1);
-}
-
-.header .search-form.active {
+} */
+/* .header .search-form.active {
     right: 2rem;
     transition: .4s linear;
 }
@@ -287,7 +282,142 @@ section {
     color: rgba(255, 200, 3, 0.84);
     text-decoration: underline;
 }
+ */
 
+ /* version 2 */
+ 
+header {
+    width: 100%;
+    /* width: 1440px; */
+    height: 677px;
+    /* background: #2d25a0; */
+    background: #26282f 0% 0% no-repeat padding-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  /* main,
+  footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  } */
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 42px;
+    margin-bottom: 67px;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .navbar-left ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .navbar-left ul li {
+    float: left;
+  }
+  
+  .navbar-left ul li a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+ 
+
+  /* ------ */
+  
+  .navbar-left ul li a:hover {
+    color: #B59F55;
+}
+  
+  .container {
+    width: 80%;
+  }
+  
+  .header-contents {
+  }
+  
+  .contents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .content-title {
+    color: #d4d4d4;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 80px;
+    margin-bottom: 27px;
+  }
+  .action-button {
+    color: white;
+    background-color: #B59F55;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    margin-left: 5px;
+  }
+  .action-button:hover{
+    background-color: #dab53d;
+    box-shadow: 0 5px 15px 0  rgba(255, 200, 3, 0.84);
+  }
+  
+  .action-button a {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+  }
+  
+  .action-button a i {
+    margin: 0px 8px;
+  }
+  
+  .content img {
+    /* width: 556.01px; */
+    width: 600px;
+    /* height: 438px; */
+    height: 458px;
+
+  }
+  
+/*-------------------------
+ Animation Effect Section
+------------------------*/
+
+/* Zoom Out #1 */
+.effect img {
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+  }
+  .effect img:hover {
+    transform: scale(0.7);
+  }
+  
+  /* Gray Scale */
+  .gray-effect img {
+    filter: grayscale(0);
+  }
+  .gray-effect img:hover {
+    filter: grayscale(100%);
+  
+    transition: 0.3s ease-in-out;
+  }
+  
 
 /*----------Header Section CSS Ends-----------------*/
 
@@ -306,9 +436,9 @@ section {
     background-size:cover;
     background-repeat: no-repeat;
     /* background-size:cover; */
-    padding-top: 17rem;
-    padding-bottom: 5rem;
-    height: 70rem;
+    height: 68rem;
+    padding-top: 51rem;
+    padding-bottom: 7rem;
     /* margin-top: 23rem; */
 }
 .home .content {
@@ -731,3 +861,113 @@ section {
         margin: 2rem auto;
     }
 }
+
+
+/* V2 header */
+
+
+/*-----------------
+ Media Queries 
+----------------*/
+
+/*-------------------------------
+ Mobile Devices Tested in Pixel-2
+-------------------------------*/
+
+@media only screen and (max-width: 688px) {
+    .container {
+      width: 100%;
+    }
+  
+    header {
+      height: auto;
+    }
+    .mobile-nav {
+      display: inherit;
+      color: white;
+      margin-left: 20px;
+      font-size: 8rem;
+    }
+    .navbar-left ul {
+      display: none;
+    }
+  
+    .contents {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .content{
+      flex-direction: column;
+    }
+    .content-title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 50px;
+      margin: 20px 68px 30px 16px;
+    }
+    .action-button {
+      margin-left: 15px;
+      margin-right: 20px;
+    }
+    .content img {
+      width: 329px;
+      height: 259.17px;
+      margin: 50px 15px 62px 15px;
+    }
+    
+  
+  }
+  
+  /*-----------------------------
+   Tablet Devices Tested in iPad
+  -----------------------------*/
+  
+  @media only screen and (min-width: 689px) and (max-width: 992px) {
+    .container {
+      width: 100%;
+    }
+  
+    .mobile-nav {
+      display: inherit;
+      color: white;
+      margin-left: 20px;
+      font-size: 20px;
+    }
+    .navbar-left ul {
+      display: none;
+    }
+  
+    .contents {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .content {
+      flex-direction: column;
+    }
+  
+    .content-title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 50px;
+      margin: 20px 68px 30px 16px;
+    }
+    .action-button {
+      margin-left: 15px;
+      margin-right: 20px;
+    }
+  
+    .content img {
+      width: 350px;
+      height: 300px;
+      margin: 50px 15px 62px 15px;
+    }
+  
+    
+  
+    
+  
+    
+  }
+  

@@ -4,6 +4,9 @@ session_start();
 require   "./../database/DB.php";
 
 class UserController{
+    
+
+
     public function newUser(){
         try{
             if(isset($_POST["submit"])) {

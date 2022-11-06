@@ -28,10 +28,6 @@ $categories = $data->getAllcategories();
             <!-- NavBar -->
             <?php include('./../include/navbar.php') ?>
 
-            <!-- -------- Card --------- -->
-            <?php include('./../include/card.php') ?>
-
-
             <!-- ----- Table ------ -->
             <div class="table-categories">
                 <!-- candidates result tabl -->

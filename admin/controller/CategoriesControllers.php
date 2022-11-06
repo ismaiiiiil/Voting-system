@@ -4,6 +4,7 @@ session_start();
 require   "./../database/DB.php";
 
 class CategoryController{
+    
     public function newCategory(){
         if(isset($_POST["submit"])) {
         
@@ -121,7 +122,7 @@ class CategoryController{
     }
 
     
-
+    
 
 
 

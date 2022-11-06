@@ -23,7 +23,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="gestionAdmin.php">
                 <i class="fas fa-th-large"></i>
                 <div class="title">Admin</div>
             </a>

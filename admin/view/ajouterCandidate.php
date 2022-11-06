@@ -1,6 +1,5 @@
  <?php
 include './../controller/CandidateControllers.php';
-
 $data = new CandidateController();
 $categories = $data->getAllcategories();
 if($_SESSION['status_code'] = 'success'){

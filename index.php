@@ -19,13 +19,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <script
+      src="https://kit.fontawesome.com/5c565df8e2.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
 </head>
 
 <body>
-    <header class="header">
+    <!-- <header class="header">
         <h1 href="#" class="logo">
             <img src="./assets/logo2.png" width="35px" height="35px" alt="">
             Voting
@@ -41,7 +45,6 @@
         <div class="icons">
             <?php if( !isset($_SESSION['user_id'])){  ?>
             <a href="signup.php" class="btn">login</a>
-             <!-- Logout  -->
             <?php }else{  ?>
             <hr>
             <a href="./logout.php" class="btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -49,18 +52,69 @@
 
         </div>
 
-    </header>
+    </header> -->
     <!-- header section ends -->
 
     <!-- home section starts  -->
 
-    <section class="home" id="home">
+    <!-- <section class="home" id="home">
         <div class="content">
             <h3>Globe Soccer Award <span>2022</span>.</h3>
             <h3>VOTE FOR YOUR FAVOURITES .</h3>
             <a href="#category" class="btn">Vote Now</a>
         </div>
-    </section>
+    </section> -->
+    <!-- ------------------- Version 2--------------------------------- -->
+    <header>
+      <section class="container">
+        <!-- nabigation bar start -->
+        <nav>
+          <div class="navbar-left">
+            <div class="mobile-nav">
+              <i class="fa fa-bars"></i>
+            </div>
+            <ul>
+              <li><a href="#!" target="_blank">Home</a></li>
+              <li><a href="#!" target="_blank">Clubs</a></li>
+              <li><a href="#!" target="_blank">Contact</a></li>
+            </ul>
+            
+        </div>
+        <div class="navbar-right">
+                <?php if( !isset($_SESSION['user_id'])){  ?>
+                <a class="action-button" href="signup.php" class="btn">login</a>
+                <?php }else{  ?>
+                <hr>
+                <a class="action-button" href="./logout.php" class="btn"><i class="fas fa-sign-in-alt"></i> Logout</a>
+                <?php } ?>
+          </div>
+        </nav>
+        <!-- /.nabigation bar end -->
+
+        <!-- header banner section start  -->
+        <div class="header-contents">
+          <div class="contents">
+            <div class="content">
+              <h1 class="content-title">Conmebol Copa America 2021</h1>
+                <a class="action-button" href="#category" target="_blank" class="action-button"
+                  >Vote Now<i class="fas fa-arrow-right"></i
+                ></a>
+            </div>
+
+            <div class="content effect">
+              <!-- <img src="assets/log1.png" alt="bannner image" /> -->
+              <img src="assets/log1.png" alt="bannner image" />
+            </div>
+          </div>
+        </div>
+        <!-- /.header banner section end  -->
+      </section>
+    </header>
+
+
+
+
+
 
     <!-- categories section starts  -->
     
@@ -151,6 +205,9 @@
         </div>
         <div class="credit">created by <span>Morad And Ismail</span></div>
     </section>
+
+    <!-- v2 footer -->
+   
 
 
     <!----------------Scripts------------------------->

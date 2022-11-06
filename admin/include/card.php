@@ -1,7 +1,17 @@
+<?php
+require './../controller/NumberCardControllers.php';
+$num=new NumberCardController();
+$sum_categories=$num->getNumbercategories();
+$sum_users=$num->getNumberusers();
+$sum_votes=$num->getNumbervotes();
+$sum_candidates=$num->getNumbercandidates();
+
+?>
+
 <div class="cards">
     <div class="card">
         <div class="card-content">
-            <div class="number">67</div>
+            <div class="number"><?php echo $sum_users; ?></div>
             <div class="card-name">Number Users</div>
         </div>
         <div class="icon-box">
@@ -10,7 +20,7 @@
     </div>
     <div class="card">
         <div class="card-content">
-            <div class="number">105</div>
+            <div class="number"><?php echo $sum_candidates; ?></div>
             <div class="card-name">Number Candidates</div>
         </div>
         <div class="icon-box">
@@ -19,7 +29,7 @@
     </div>
     <div class="card">
         <div class="card-content">
-            <div class="number">8</div>
+            <div class="number"><?php echo $sum_categories; ?></div>
             <div class="card-name">Number Categories</div>
         </div>
         <div class="icon-box">
@@ -28,7 +38,7 @@
     </div>
     <div class="card">
         <div class="card-content">
-            <div class="number">500</div>
+            <div class="number"><?php echo $sum_votes; ?></div>
             <div class="card-name">Number Votes</div>
         </div>
         <div class="icon-box">

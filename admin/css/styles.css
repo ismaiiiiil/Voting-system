@@ -256,7 +256,7 @@ body {
 }
 
 .cards {
-    margin-top: 60px;
+    margin-top: 2rem;
     width: 100%;
     padding: 35px 20px;
     display: grid;
@@ -302,6 +302,24 @@ body {
     align-items: self-start;
     padding: 0 20px 20px 20px;
 }
+/* ------------ admin ------------------ */
+.admins-visiting{
+    width: 90%;
+    margin: auto;
+    /* display: grid; */
+    /* grid-template-columns: 2fr 1fr; */
+    
+    grid-gap: 20px;
+    align-items: self-start;
+    padding: 8rem 20px 20px 20px;
+}
+.admins{
+    min-height: auto;
+    /* background: #fff; */
+    background: #17171b 0% 0% no-repeat padding-box;
+    padding: 14px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 /* ---------categories --------------- */
 .table-categories{
     width: 90%;
@@ -310,7 +328,7 @@ body {
     /* grid-template-columns: 2fr 1fr; */
     grid-gap: 20px;
     align-items: self-start;
-    padding: 0 20px 20px 20px;
+    padding: 8rem 20px 20px 20px;
 }
 .categories-visiting {
     min-height: auto;
@@ -349,7 +367,7 @@ body {
 }
 
 .last-appointments,
-.doctor-visiting {
+.doctor-visiting{
     min-height: auto;
     /* background: #fff; */
     background: #17171b 0% 0% no-repeat padding-box;

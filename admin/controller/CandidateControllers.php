@@ -5,12 +5,13 @@ require   "./../database/DB.php";
 
 class CandidateController{
 // ---------- select ----------------
-    public function getAllcategories(){
-        $query = "SELECT * FROM categories";
-        $data = DB::connect()->query($query); 
-        $categories = $data->fetchAll();
-        return $categories;
-    }
+public function getAllcategories(){
+    $query = "SELECT * FROM categories";
+    $data = DB::connect()->query($query); 
+    $categories = $data->fetchAll();
+    return $categories;
+}
+
 
     public function getCandidate(){
         if(isset($_GET['id'])){
@@ -138,5 +139,8 @@ public function updateCandidate(){
         };
         // echo var_dump($stmt);
     }
+}
+public function sumCandidate(){
+
 }
 }
