@@ -134,7 +134,7 @@ body {
     grid-template-columns: 10fr 0.4fr 1fr;
     grid-gap: 5px;
     align-items: center;
-    height: 4.5rem;
+    height: 3.8rem;
     box-shadow: 0 4px 8px 0 #B59F55;
     z-index: 1;
   }
@@ -256,7 +256,7 @@ body {
 }
 
 .cards {
-    margin-top: 2rem;
+    margin-top: 4rem;
     width: 100%;
     padding: 35px 20px;
     display: grid;
