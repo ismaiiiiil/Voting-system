@@ -65,7 +65,7 @@
         </div>
     </section> -->
     <!-- ------------------- Version 2--------------------------------- -->
-    <header>
+    <header class="header">
       <section class="container">
         <!-- nabigation bar start -->
         <nav>

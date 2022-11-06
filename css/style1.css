@@ -286,7 +286,7 @@ section {
 
  /* version 2 */
  
-header {
+.header {
     width: 100%;
     /* width: 1440px; */
     height: 677px;
@@ -631,19 +631,19 @@ header {
     color: #fe7;
     text-shadow: 0 0 20px #952;
   }
-  #rate-1:checked ~ form .head:before{
+  #rate-1:checked ~ form header:before{
     content: "I just hate it ";
   }
-  #rate-2:checked ~ form .head:before{
+  #rate-2:checked ~ form header:before{
     content: "I don't like it ";
   }
-  #rate-3:checked ~ form .head:before{
+  #rate-3:checked ~ form header:before{
     content: "It is awesome ";
   }
-  #rate-4:checked ~ form .head:before{
+  #rate-4:checked ~ form header:before{
     content: "I just like it ";
   }
-  #rate-5:checked ~ form .head:before{
+  #rate-5:checked ~ form header:before{
     content: "I just love it ";
   }
   .feedback form{
@@ -652,7 +652,7 @@ header {
   input:checked ~ form{
     display: block;
   }
-  form .head{
+  form header{
     width: 100%;
     font-size: 25px;
     color: #fe7;
@@ -879,7 +879,7 @@ header {
       width: 100%;
     }
   
-    header {
+    .header {
       height: auto;
     }
     .mobile-nav {
