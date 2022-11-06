@@ -58,8 +58,8 @@ if(isset($_GET["id"]))
     <header class="header">
         <!-- <h1 href="#" class="logo"><i class="fa-solid fa-check-to-slot"></i>Voting</h1> -->
         <h3 href="#" class="logo">
-            <img src="./assets/logo2.png" width="35px" height="35px" alt="">
-            Voting
+            <img src="./assets/win1.png" width="60px" height="60px" alt="">
+            Result
         </h3>
         <nav class="navbar">
             <a href="index.php">Home</a>

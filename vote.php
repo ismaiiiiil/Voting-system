@@ -102,7 +102,7 @@ if (isset($_GET["id"])) {
         
         <!-- <h1 href="#" class="logo"><i class="fa-solid fa-check-to-slot"></i>Voting</h1> -->
         <h3 href="#" class="logo">
-            <img src="./assets/logo2.png" width="35px" height="35px" alt="">
+            <img src="./assets/voted-icone.png" width="50px" height="50px" alt="">
             Voting
         </h3>
         <nav class="navbar">
@@ -143,9 +143,10 @@ if (isset($_GET["id"])) {
                     if($Voted === false ) {?>
                         <a href="addVote.php?id=<?php echo $candidate["cand_id"]; ?>&category=<?php echo $candidate["category"]; ?>">Vote Now</a>
                     <?php }else{ ?>
-                        <h1 class='voted'>
-                            <i class="fa-solid fa-check"></i>    
-                            Voted
+                        <h1 class='interdi'>
+                            <!-- <i class="fa-solid fa-check"></i>  -->
+                            <img src="assets/interdi-icone.png" width="30" alt="">
+                            Not allowed
                         </h1>
                 <?php 
                     }

@@ -6,6 +6,23 @@
     $data = $db->query($query); // PDOStatment -- CURSEUR
     $data = $data->fetchAll(); // tatjib kolchi
 
+    if(!empty($_SESSION['user_id'])){
+    $stmt1 = $db->prepare('SELECT voting.catg_id from voting 
+                            JOIN users on voting.user_id=users.user_id
+                            JOIN categories on voting.catg_id=categories.catg_id
+                            where voting.user_id=:user_id 
+                        ');
+    $stmt1->execute(array(
+                    ":user_id"=>$_SESSION["user_id"]
+                ));
+            
+    $result = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+    $res=array();
+    for( $i=0; $i < count($result); $i++) {
+        array_push($res,  $result[$i]['catg_id']);
+    }
+    }
+    // var_dump($res);
 ?>
 
 
@@ -122,19 +139,58 @@
     <h1  id="category" class="heading">Voting <span>categories</span></h1>
 
     <section class="container-card">
-        <?php foreach($data as $category) : ?>
-
+    <?php if(!empty($_SESSION['user_id'])){
+        
+         foreach($data as $category) : ?>
+            <?php 
+                if( in_array($category['catg_id'],$res)
+            ){ ?>
             <div class="card">
                 <div class="imgBx">
                     <img src="./public/uploads/<?php echo $category["image"]; ?>" alt="">
                     <h1><?php  echo$category["catg_name"];?></h1>
                 </div>
                 <div class="content">
-                    <a class="btn-vote" href="vote.php?id=<?php echo $category["catg_id"];?>">Voting Now</a>
-                    <!-- <a class="btn-vote" href="result.php?id=<?php echo $category["catg_id"];?>">Result</a> -->
+                    <a class="btn-voted" href="vote.php?id=<?php echo $category["catg_id"];?>">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Voted
+                    </a>
                 </div>
             </div>
-        <?php endforeach; ?>
+                    <?php
+                    }else if(
+                        !in_array($category['catg_id'],$res)
+                    ){ ?>
+                    <div class="card1">
+                        <div class="imgBx">
+                            <img src="./public/uploads/<?php echo $category["image"]; ?>" alt="">
+                            <h1><?php  echo$category["catg_name"];?></h1>
+                        </div>
+                        <div class="content">
+                            <a class="btn-vote" href="vote.php?id=<?php echo $category["catg_id"];?>">Voting Now</a>
+                        </div>
+                    </div>
+                    <?php
+                        }
+                    ?>
+                
+        <?php endforeach; 
+        }else{ ?>
+            <?php foreach($data as $category) : ?>
+                <div class="card1">
+                    <div class="imgBx">
+                        <img src="./public/uploads/<?php echo $category["image"]; ?>" alt="">
+                        <h1><?php  echo$category["catg_name"];?></h1>
+                    </div>
+                    <div class="content">
+                        <a class="btn-vote" href="vote.php?id=<?php echo $category["catg_id"];?>">Voting Now</a>
+                        <!-- <a class="btn-vote" href="result.php?id=<?php echo $category["catg_id"];?>">Result</a> -->
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php 
+        }
+        ?>
 
         
     </section>

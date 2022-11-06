@@ -468,6 +468,12 @@ section {
     line-height: 1.8;
 }
 
+/* ----------btn------------
+.interdi{
+    font-size: 1.5rem;
+    color: #fb002e;
+    text-shadow: 0 0 20px rgb(255 0 12), 0 0 20px rgb(10 175 230 / 0%);
+} */
 
 /*-------Home Section CSS ends---------------*/
 
@@ -497,6 +503,93 @@ section {
     flex-wrap: wrap;
     padding: 30px;
 }
+.container-card .card1 h3 {
+    font-size: 2rem;
+    color: #fff;
+    line-height: 1.8;
+}
+.container-card .card1{
+    position: relative;
+    max-width: 300px;
+    height: 230px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    color: #d4d4d4;
+    border-radius:5px ;
+    flex-direction: column;
+    background: 	#212121;
+    /* background: #26282f 0% 0% no-repeat padding-box; */
+    /* box-shadow: 0 5px 202px  rgba(255, 200, 3, 0.84); */
+    transition: .3s ease-in-out;
+}
+
+.container-card .card1:hover{
+    height: 300px;
+    outline: .2rem solid rgba(255, 200, 3, 0.84);
+    outline-offset: 0rem;
+}
+.container-card .card1 .imgBx{
+    position: relative;
+    width: 260px;
+    height: 200px;
+    top: -60px;
+    left: 7px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+}
+.container-card .card1 .imgBx img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.container-card .card1 .imgBx h1{
+    margin: 5px 15px;
+    color: #dab53d;
+    font-size:20px ;
+}
+.container-card .card1 .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+.container-card .card1:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.container-card .card1 .content .btn-voted .img-btn{
+    width: 10px;
+}
+
+.container-card .card1 .content .btn-vote{
+    color: white;
+    background-color: #B59F55;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    margin-left: 5px;
+}
+
+.container-card .card1 .content .btn-vote:hover{
+    background-color: #dab53d;
+    box-shadow: 0 5px 15px 0  rgba(255, 200, 3, 0.84);
+    /* box-shadow: 1px 2px 10px #eac444; */
+}
+
+
+
+
+
+
+
+/* card */
 .container-card .card h3 {
     font-size: 2rem;
     color: #fff;
@@ -520,7 +613,7 @@ section {
 
 .container-card .card:hover{
     height: 300px;
-    outline: .2rem solid rgba(255, 200, 3, 0.84);
+    outline: .2rem solid #1fe83d;
     outline-offset: 0rem;
 }
 .container-card .card .imgBx{
@@ -555,9 +648,13 @@ section {
     opacity: 1;
     margin-top: 10px;
 }
-.container-card .card .content .btn-vote{
+
+.container-card .card .content .btn-voted .img-btn{
+    width: 10px;
+}
+.container-card .card .content .btn-voted{
     color: white;
-    background-color: #B59F55;
+    background-color:  #099704;
     border-radius: 20px;
     border: none;
     font-weight: bold;
@@ -565,20 +662,11 @@ section {
     font-size: 1.7rem;
     margin-left: 5px;
 }
-
-.container-card .card .content .btn-vote:hover{
-    background-color: #dab53d;
-    box-shadow: 0 5px 15px 0  rgba(255, 200, 3, 0.84);
+.container-card .card .content .btn-voted:hover{
+    background-color: #1fe83d ;
+    box-shadow: 0 5px 15px 0  #0de126c8;
     /* box-shadow: 1px 2px 10px #eac444; */
 }
-
-
-
-
-
-
-
-
 /* ---------------- feedback------------------ */
 .feedback{
     /* position: relative; */
