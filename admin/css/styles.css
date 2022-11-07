@@ -127,24 +127,21 @@ body {
 } */
 /* ---V2 ---- */
 
-
-.top-bar{ 
-     /* position: absolute; */
-    /*top: 0;
-    left: 0;
-    width: 100%; */
+  .top-bar{
+    border-radius: 6px;
+    /* position: absolute; */
     position: fixed;
     /* height: 60px; */
-    width: calc(100% - 300px);
+    margin-left: 12px;
+    width: calc(100% - 325px);
     /* background: #26282f 0% 0% no-repeat padding-box; */
-  background: #0f0f0f;
-
+    background: #212121c2;
     display: grid;
     grid-template-columns: 10fr 0.4fr 1fr;
     grid-gap: 5px;
     align-items: center;
     height: 3.8rem;
-    box-shadow: 0 4px 8px 0 #B59F55;
+    margin-top: 6px;
     z-index: 1;
   }
   
@@ -216,7 +213,7 @@ body {
   .top-bar .navbar .right ul li .dropdown{
     position: absolute;
     top: 65px;
-    right: -120px;
+    /* right: -120px; */
     background: #d4d4d4;
     /* background: #26282f 0% 0% no-repeat padding-box; */
     padding: 10px 25px;
@@ -309,28 +306,31 @@ body {
     display: grid;
     grid-template-columns: 2fr 1.2fr;
     grid-gap: 20px;
-    align-items: self-start;
+    align-items:flex-start;
     padding: 0 20px 20px 20px;
 }
 /* ------------ admin ------------------ */
-.admins-visiting{
+.table-admines{
     width: 90%;
     margin: auto;
     /* display: grid; */
     /* grid-template-columns: 2fr 1fr; */
-    
     grid-gap: 20px;
-    align-items: self-start;
+    align-items:flex-start;
     padding: 8rem 20px 20px 20px;
 }
-.admins{
+.admins-visiting{
     min-height: auto;
     /* background: #fff; */
     /* background: #17171b 0% 0% no-repeat padding-box; */
     background: 	#212121;
-
+    border-radius: 5px;
     padding: 14px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.admins-visiting  .visiting td{
+    height: auto;
+    width: fit-content;
 }
 /* ---------categories --------------- */
 .table-categories{
@@ -347,6 +347,7 @@ body {
     /* background: #fff; */
     /* background: #17171b 0% 0% no-repeat padding-box; */
     background: 	#212121;
+    border-radius: 5px;
 
     padding: 14px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -386,7 +387,7 @@ body {
     /* background: #fff; */
     /* background: #17171b 0% 0% no-repeat padding-box; */
     background: 	#212121;
-
+    border-radius: 5px;
     padding: 14px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -708,7 +709,8 @@ input[type='text'],input[type='email'],input[type='select'],input[type='password
         left: 60px;
     }
     .top-bar {
-        width: calc(100% - 60px);
+        /* width: calc(100% - 60px); */
+        width: calc(100% - 90px);
     }
 }
 
@@ -726,6 +728,13 @@ input[type='text'],input[type='email'],input[type='select'],input[type='password
     .tables {
         grid-template-columns: 1fr;
     }
+    .top-bar {
+        /* width: calc(100% - 60px); */
+        width: calc(100% - 90px);
+    }
+    .top-bar .navbar ul li .text{
+        margin-right: 0px;
+    }
 }
 
 @media(max-width:530px) {
@@ -735,16 +744,21 @@ input[type='text'],input[type='email'],input[type='select'],input[type='password
     .last-appointments td:nth-child(3) {
         display: none;
     }
+    /* .top-bar {
+        width: calc(100% - 60px);
+        width: calc(100% - 70px);
+    } */
 }
 
 @media(max-width:420px) {
     .last-appointments,
     .doctor-visiting,
-    .categories-visiting {
+    .categories-visiting
+     {
         font-size: 70%;
         padding: 10px;
         min-height: 300px;
-    }
+    }    
     .cards,
     .tables {
         padding: 10px;
