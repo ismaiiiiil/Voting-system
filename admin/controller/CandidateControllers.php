@@ -6,7 +6,7 @@ require   "./../database/DB.php";
 class CandidateController{
 // ---------- select ----------------
 public function getAllcategories(){
-    $query = "SELECT * FROM categories";
+    $query = "SELECT * FROM categories ORDER BY RAND()";
     $data = DB::connect()->query($query); 
     $categories = $data->fetchAll();
     return $categories;

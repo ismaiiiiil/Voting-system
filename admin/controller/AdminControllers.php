@@ -6,7 +6,7 @@ require   "./../database/DB.php";
 class AdminController{
 // ---------- select ----------------
     public function getAlladmins(){
-        $query = "SELECT * FROM admin";
+        $query = "SELECT * FROM admin ORDER BY RAND()";
         $data = DB::connect()->query($query); 
         $admins = $data->fetchAll();
         return $admins;

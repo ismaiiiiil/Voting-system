@@ -2,7 +2,7 @@
     session_start();
 
     require("config.php");
-    $query = "SELECT * FROM categories";
+    $query = "SELECT * FROM categories ORDER BY RAND()";
     $data = $db->query($query); // PDOStatment -- CURSEUR
     $data = $data->fetchAll(); // tatjib kolchi
 
@@ -46,41 +46,6 @@
 </head>
 
 <body>
-    <!-- <header class="header">
-        <h1 href="#" class="logo">
-            <img src="./assets/logo2.png" width="35px" height="35px" alt="">
-            Voting
-        </h1>
-
-
-        <nav class="navbar">
-            <a href="index.php">Home</a>
-            <a href="#footer">contact</a>
-            <a href="#category">categories</a>
-        </nav>
-
-        <div class="icons">
-            <?php if( !isset($_SESSION['user_id'])){  ?>
-            <a href="signup.php" class="btn">login</a>
-            <?php }else{  ?>
-            <hr>
-            <a href="./logout.php" class="btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
-            <?php } ?>
-
-        </div>
-
-    </header> -->
-    <!-- header section ends -->
-
-    <!-- home section starts  -->
-
-    <!-- <section class="home" id="home">
-        <div class="content">
-            <h3>Globe Soccer Award <span>2022</span>.</h3>
-            <h3>VOTE FOR YOUR FAVOURITES .</h3>
-            <a href="#category" class="btn">Vote Now</a>
-        </div>
-    </section> -->
     <!-- ------------------- Version 2--------------------------------- -->
     <header class="header">
       <section class="container">
@@ -91,9 +56,10 @@
               <i class="fa fa-bars"></i>
             </div>
             <ul>
-              <li><a href="#!" target="_blank">Home</a></li>
-              <li><a href="#!" target="_blank">Clubs</a></li>
-              <li><a href="#!" target="_blank">Contact</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="#category">categories</a></li>
+              <li><a href="#feedback">FeedBack</a></li>
+              <li><a href="#footer">contact</a></li>
             </ul>
             
         </div>
@@ -112,8 +78,8 @@
         <div class="header-contents">
           <div class="contents">
             <div class="content">
-              <h1 class="content-title">Conmebol Copa America 2021</h1>
-                <a class="action-button" href="#category" target="_blank" class="action-button"
+              <h1 class="content-title">VOTE FOR YOUR FAVOURITES 2022</h1>
+                <a class="action-button" href="#category" class="action-button"
                   >Vote Now<i class="fas fa-arrow-right"></i
                 ></a>
             </div>
@@ -196,7 +162,7 @@
     </section>
 
     <!-- ----------FeedBack ------------ -->
-    <h1  id="category" class="heading">Your <span>FeedBack</span></h1>
+    <h1  id="feedback" class="heading">Your <span>FeedBack</span></h1>
         <div class="contents">
             <div class="content effect">
                 <!-- <img src="assets/log1.png" alt="bannner image" /> -->
@@ -274,6 +240,7 @@
 
     <!-- v2 footer -->
    
+    <div class="loader"></div>
 
 
     <!----------------Scripts------------------------->
@@ -298,6 +265,8 @@
         return false;
       }
     </script>
+    <script src="./js/loader.js"></script>
+   
 </body>
 
 </html>

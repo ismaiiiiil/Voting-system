@@ -21,13 +21,13 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    /* z-index: 1000; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 9%;
     /* background: #17171b 0% 0% no-repeat padding-box; */
-    background: #0f0f0f;
+    background: #0f0f0f85;
     /* box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 1); */
 }
 
@@ -54,8 +54,25 @@ header {
     color: rgba(255, 200, 3, 0.84);
 }
 
-
-
+/* ------- btn return---------- */
+.btn-return{
+    margin-right: 50rem;
+    margin-top: 8rem;
+}
+.btn-return .btn-back{
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #0f0f0f;
+    font-weight: bold;
+    color: #fff;
+    border: 3px solid #212121;
+}
+.btn-return .btn-back:hover{
+    background-color: #212121;
+    /* color: white; */
+    color: rgba(255, 200, 3, 0.84);
+}
 
 /*----------Header Section CSS Ends-----------------*/
 
@@ -63,8 +80,7 @@ header {
 
 #container
 {
-    /* width: 1200px; */
-    margin-top: 5rem;
+    
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -96,8 +112,6 @@ header {
   .wrapper .card{
     /* background: #17171b 0% 0% no-repeat padding-box; */
     background: 	#212121;
-
-  
     /* background: #26282f 0% 0% no-repeat padding-box; */
     /* box-shadow: 0 5px 22px  rgba(255, 200, 3, 0.84); */
     transition: .3s ease-in-out;
@@ -362,6 +376,45 @@ header {
   
   
   
+  
+  /* ------- loader------ */
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    background: #333333;
+    transition: opacity 0.75s, visibility 0.75s;
+  }
+  
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: rgba(255, 200, 3, 0.84);
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
   
   
   

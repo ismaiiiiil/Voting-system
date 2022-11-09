@@ -130,6 +130,10 @@ $users = $data->fetchAll(); // tatjib kolchi
             </div>
         </div>
     </div>
+    <div class="loader"></div>
+
+    <script src="./../js/loader.js"></script>
+
     <?php include './../include/scripts.php';  
     unset($_SESSION['status']);
     unset($_SESSION['status_code']);

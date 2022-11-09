@@ -8,7 +8,6 @@ session_start();
 // }
 
 
-
 if(isset($_GET["id"])) 
 {
     $id = $_GET["id"];
@@ -20,8 +19,9 @@ if(isset($_GET["id"]))
         $query = "SELECT candidates.firstname,candidates.lastname,candidates.candidate_image,candidates.votes , sum(candidates.votes) as sumvotes from candidates
         JOIN categories on categories.catg_id=candidates.category
         where category=:id
-        
-        group by candidates.firstname,candidates.lastname,candidates.candidate_image,candidates.votes"; 
+        group by candidates.firstname,candidates.lastname,candidates.candidate_image,candidates.votes
+        ORDER BY RAND()
+        "; 
         $stmt = $db->prepare($query);
         $stmt->execute(array(":id"=>$id)); 
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -66,9 +66,12 @@ if(isset($_GET["id"]))
         </nav>
     </header>
 
-
+    <div class="btn-return">
+        <a href="./vote.php?id=<?php echo $id;?>" class="btn-back">Go Back</a>
+    </div>
 
     <div id="container">
+        
         <!-- clock -->
         <div class="wrapper">
         <?php foreach($data as $candidate) : ?>
@@ -96,6 +99,8 @@ if(isset($_GET["id"]))
         <?php endforeach; ?>
         </div>
     </div>
+    <div class="loader"></div>
+
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -106,6 +111,8 @@ if(isset($_GET["id"]))
     unset($_SESSION['status']);
     unset($_SESSION['status_code']);
     ?>
+    <script src="./js/loader.js"></script>
+
 </body>
 
 </html>

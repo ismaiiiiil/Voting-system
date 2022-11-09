@@ -77,6 +77,10 @@ $categories = $data->getAllcategories();
             </div>
         </div>
     </div>
+    <div class="loader"></div>
+
+    <script src="./../js/loader.js"></script>
+
     <?php include './../include/scripts.php';  
 
     unset($_SESSION['status']);

@@ -29,7 +29,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="result.php">
                 <i class="fa-solid fa-square-poll-horizontal"></i>
                 <div class="title">Result</div>
             </a>

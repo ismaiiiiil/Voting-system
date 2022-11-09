@@ -23,7 +23,9 @@ if (isset($_GET["id"])) {
     require("config.php");
     $query = "SELECT * from candidates
         JOIN categories on categories.catg_id=candidates.category
-        where category=:id";
+        where category=:id
+        ORDER BY RAND()
+        ";
     $stmt = $db->prepare($query);
     $stmt->execute(array(":id" => $id));
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -98,8 +100,8 @@ if (isset($_GET["id"])) {
 
 
 <body>
+
     <header class="header">
-        
         <!-- <h1 href="#" class="logo"><i class="fa-solid fa-check-to-slot"></i>Voting</h1> -->
         <h3 href="#" class="logo">
             <img src="./assets/voted-icone.png" width="50px" height="50px" alt="">
@@ -110,9 +112,6 @@ if (isset($_GET["id"])) {
             <a href="result.php?id=<?php echo $id; ?>">Result</a>
         </nav>
     </header>
-
-
-
     <div id="container">
         <!-- clock -->
         <div id="clock">
@@ -157,6 +156,8 @@ if (isset($_GET["id"])) {
             <?php endforeach; ?>
         </div>
     </div>
+    <div class="loader"></div>
+    
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -191,6 +192,7 @@ if (isset($_GET["id"])) {
     }, 1000);
 
     </script>
+    <script src="./js/loader.js"></script>
 </body>
 
 </html>
