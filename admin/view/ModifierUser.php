@@ -5,7 +5,8 @@ $data = new UserController();
 $user=$data->getUser();
 if(isset($_POST['submit'])){
     $data = new UserController();
-    $data->updateUser();
+    $modifier=$data->updateUser();
+    // echo var_dump($modifier);
 }
 ?>
 <!DOCTYPE html>

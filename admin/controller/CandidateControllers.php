@@ -14,8 +14,8 @@ public function getAllcategories(){
 
 
     public function getCandidate(){
-        if(isset($_GET['id'])){
-            $id = $_GET["id"];
+        if(isset($_POST['cand_id'])){
+            $id = $_POST["cand_id"];
             if(is_numeric($id))
             {
                 $query = "SELECT * from candidates where cand_id=:id";

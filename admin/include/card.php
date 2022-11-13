@@ -24,7 +24,7 @@ $sum_candidates=$num->getNumbercandidates();
             <div class="card-name">Number Candidates</div>
         </div>
         <div class="icon-box">
-            <i class="fas fa-wheelchair"></i>
+            <i class='bx bxs-group'></i>
         </div>
     </div>
     <div class="card">
@@ -33,7 +33,7 @@ $sum_candidates=$num->getNumbercandidates();
             <div class="card-name">Number Categories</div>
         </div>
         <div class="icon-box">
-            <i class="fa-solid fa-medal"></i>
+            <i class='bx bxs-category'></i>
         </div>
     </div>
     <div class="card">

@@ -50,8 +50,8 @@ class AdminController{
     }
 
     public function getAdmin(){
-        if(isset($_GET['id'])){
-            $id = $_GET["id"];
+        if(isset($_POST['admin_id'])){
+            $id = $_POST["admin_id"];
             if(is_numeric($id))
             {
                 $query = "SELECT * from admin where admin_id=:id";

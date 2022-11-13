@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(isset($_GET['id'])){
-    $id = $_GET["id"];
+if(isset($_POST['user_id'])){
+    $id = $_POST["user_id"];
     if(is_numeric($id))
     {
         require("./../../config.php");         

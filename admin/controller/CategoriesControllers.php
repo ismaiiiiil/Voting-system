@@ -38,8 +38,8 @@ class CategoryController{
         }
     }
     public function getCategory(){
-        if(isset($_GET['id'])){
-            $id = $_GET["id"];
+        if(isset($_POST['catg_id'])){
+            $id = $_POST["catg_id"];
             if(is_numeric($id))
             {
                 $query = "SELECT * from categories where catg_id=:id";

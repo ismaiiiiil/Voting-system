@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(isset($_GET['id'])){
-    $id = $_GET["id"];
+if(isset($_POST['cand_id'])){
+    $id = $_POST["cand_id"];
     if(is_numeric($id))
     {
         require("./../../config.php"); //bach itl3o erreur

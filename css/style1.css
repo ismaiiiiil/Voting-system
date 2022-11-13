@@ -362,6 +362,7 @@ section {
     line-height: 80px;
     margin-bottom: 27px;
   }
+  
   .action-button {
     color: white;
     background-color: #B59F55;
@@ -702,7 +703,7 @@ section {
   .feedback .edit:hover{
     text-decoration: underline;
   }
-  .feedback .star-widget input{
+  .feedback .star-widget input[type='radio']{
     display: none;
   }
   .star-widget label{
@@ -712,14 +713,14 @@ section {
     float: right;
     transition: all 0.2s ease;
   }
-  input:not(:checked) ~ label:hover,
-  input:not(:checked) ~ label:hover ~ label{
+  input[type='radio']:not(:checked) ~ label:hover,
+  input[type='radio']:not(:checked) ~ label:hover ~ label{
     color: #fd4;
   }
-  input:checked ~ label{
+  input[type='radio']:checked ~ label{
     color: #fd4;
   }
-  input#rate-5:checked ~ label{
+  input[type='radio']#rate-5:checked ~ label{
     color: #fe7;
     text-shadow: 0 0 20px #952;
   }
@@ -741,7 +742,7 @@ section {
   .feedback form{
     display: none;
   }
-  input:checked ~ form{
+  input[type='radio']:checked ~ form{
     display: block;
   }
   form header{
@@ -776,8 +777,10 @@ section {
     height: 45px;
     width: 100%;
     margin: 15px 0;
+    display: flex;
+    justify-content: center;
   }
-  form .btn-form button{
+  form .btn-form input[type='submit']{
     height: 100%;
     width: 100%;
     border: 1px solid #444;
@@ -790,7 +793,7 @@ section {
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  form .btn-form button:hover{
+  form .btn-form input[type='submit']:hover{
     background: #1b1b1b;
   }
 /* ---------------------------------------- */

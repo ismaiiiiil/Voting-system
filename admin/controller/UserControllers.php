@@ -45,13 +45,15 @@ class UserController{
                 }
             }
         } catch (PDOException $e){
-            echo "console.log( 'ERROR: ' . $e->getMessage())";
+            echo 'ERROR: ' . $e->getMessage();
         }
     }
 
     public function getUser(){
-        if(isset($_GET['id'])){
-            $id = $_GET["id"];
+        // if(isset($_GET['id'])){
+        //     $id = $_GET["id"];
+        if(isset($_POST['user_id'])){
+            $id = $_POST["user_id"];
             if(is_numeric($id))
             {
                 $query = "SELECT * from users where user_id=:id";
@@ -75,7 +77,7 @@ class UserController{
     }
 
     public function updateUser(){
-        try{
+        // try{
             if(isset($_POST["submit"])) {
                 $user_id = htmlspecialchars(strtolower(trim($_POST["user_id"])));
 
@@ -105,7 +107,8 @@ class UserController{
                                         ":lastname"=> $lastname,
                                         ":birth_date"=> $birth_date,
                                         ":email"=> $email,
-                                        ":user_password"=>$user_password
+                                        ":user_password"=>$user_password,
+                                        ":gender"=>$gender
                                     ));
                         $_SESSION['status'] = 'User est modifier';
                         $_SESSION['status_code'] = 'success'; // info
@@ -120,8 +123,8 @@ class UserController{
                     $_SESSION['status_code'] = 'error'; 
                 }
             }
-        } catch (PDOException $e){
-            echo "console.log( 'ERROR: ' . $e->getMessage())";
-        }
+        // } catch (PDOException $e){
+        //     echo "ERROR:"  . $e->getMessage();
+        // }
     }
 }   
